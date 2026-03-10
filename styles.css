@@ -500,17 +500,23 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  margin-top: 1rem;
+  margin-top: 0.85rem;
   text-decoration: none;
-  color: #34d399;
+  color: #dffcf2;
   font-weight: 700;
-  transition: color 0.18s ease, text-shadow 0.18s ease, transform 0.18s ease;
+  padding: 0.72rem 1rem;
+  border-radius: 999px;
+  border: 1px solid rgba(52, 211, 153, 0.28);
+  background: rgba(8, 18, 31, 0.88);
+  transition: color 0.18s ease, text-shadow 0.18s ease, transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
 }
 
 .project-link:hover,
 .project-link:focus-visible,
 .project-link:active {
   color: #6ee7b7;
+  border-color: rgba(110, 231, 183, 0.5);
+  background: rgba(10, 27, 34, 0.95);
   text-shadow: 0 0 14px rgba(52, 211, 153, 0.24);
   transform: translateY(-1px);
   outline: none;
@@ -520,7 +526,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-  margin-top: 1rem;
+  margin: 1rem 0 0.3rem;
 }
 
 .project-links .project-link {
@@ -1073,10 +1079,10 @@ p {
 
 .about-story-accent {
   position: absolute;
-  right: -2rem;
-  bottom: -2.5rem;
-  width: 290px;
-  height: 220px;
+  right: 0.8rem;
+  bottom: 0.8rem;
+  width: 320px;
+  height: 250px;
   pointer-events: none;
 }
 
@@ -1084,8 +1090,8 @@ p {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 220px;
-  height: 220px;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   background:
     radial-gradient(circle at 50% 45%, rgba(96, 165, 250, 0.34), rgba(34, 211, 238, 0.12) 52%, rgba(5, 7, 13, 0) 72%);
@@ -1095,10 +1101,10 @@ p {
 
 .about-story-glow {
   position: absolute;
-  right: 42px;
-  bottom: 34px;
-  width: 150px;
-  height: 150px;
+  right: 56px;
+  bottom: 48px;
+  width: 170px;
+  height: 170px;
   border-radius: 50%;
   background: radial-gradient(circle, rgba(191, 219, 254, 0.18), rgba(34, 211, 238, 0.02) 68%, transparent 72%);
   filter: blur(18px);
@@ -1160,7 +1166,10 @@ p {
   font-size: clamp(2.1rem, 4vw, 3.2rem);
   line-height: 1.02;
   letter-spacing: -0.04em;
-  color: #f8fafc;
+  background: linear-gradient(90deg, #f8fafc 0%, #34d399 38%, #22d3ee 68%, #f472b6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
   max-width: 8ch;
 }
 
@@ -1318,8 +1327,8 @@ p {
   .about-story-accent {
     width: 180px;
     height: 140px;
-    right: -1rem;
-    bottom: -1.25rem;
+    right: 0.25rem;
+    bottom: 0.25rem;
   }
 
   .about-story-orb {

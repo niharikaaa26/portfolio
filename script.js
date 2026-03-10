@@ -376,8 +376,8 @@ function renderProjects(projects) {
       <div class="spotlight-content">
         <h3>${project.title}</h3>
         <p>${project.description}</p>
-        <div class="project-tags">${tags}</div>
         ${links ? `<div class="project-links">${links}</div>` : ""}
+        <div class="project-tags">${tags}</div>
         ${project.link ? `<a class="project-link" href="${project.link}" target="_blank" rel="noreferrer">${project.linkLabel || "Open Link"}</a>` : ""}
         ${project.publicationMeta ? `<p class="project-meta-note">${project.publicationMeta}</p>` : ""}
       </div>
