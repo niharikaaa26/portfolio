@@ -86,6 +86,13 @@ const portfolioData = {
   ],
   projects: [
     {
+      title: "Efficient Redirect-on-Write Snapshots for Multi-Node Storage Systems",
+      description:
+        "Designed a distributed snapshot framework for multi-node storage systems using Redirect-on-Write (ROW) to enable near-instant snapshot creation. Implemented coordination protocols including Pause-and-Snap, Two-Phase, and Speculative Snapshot to capture consistent system states, and evaluated simulated workloads for snapshot latency, throughput, and distributed state consistency.",
+      tags: ["Distributed Systems", "Storage Systems", "Snapshots", "ROW", "Performance Evaluation"],
+      theme: "blue"
+    },
+    {
       title: "High Availability WordPress Deployment",
       description:
         "Deployed a containerized WordPress application on AWS using Docker and Kubernetes with a fault-tolerant architecture built on EC2, Application Load Balancer, RDS MySQL, and S3. Implemented auto-scaling, load balancing, and CloudWatch-based monitoring for resilient cloud-native deployment.",
@@ -352,12 +359,23 @@ function renderProjects(projects) {
 
   projects.forEach((project) => {
     const card = document.createElement("article");
-    card.className = "project-card project-box";
+    card.className = `project-card project-box spotlight-card theme-${project.theme || "teal"}`;
 
     const tags = (project.tags || [])
       .map((tag) => `<span class="tag">${tag}</span>`)
       .join("");
-    const links = (project.links || [])
+    const actionLinks = [
+      ...(project.links || []),
+      ...(project.link
+        ? [
+            {
+              label: project.linkLabel || "Open Link",
+              url: project.link
+            }
+          ]
+        : [])
+    ];
+    const links = actionLinks
       .map(
         (item) =>
           `<a class="project-link" href="${item.url}" target="_blank" rel="noreferrer">${item.label}</a>`
@@ -365,19 +383,17 @@ function renderProjects(projects) {
       .join("");
 
     card.innerHTML = `
-      <div class="project-top">
-        <div class="education-badge">
-          <img class="education-badge-icon" src="assets/icon-project.svg" alt="Project" />
-        </div>
-        <p class="project-top-note">${project.publicationMeta || "Selected Project"}</p>
+      <div class="spotlight-visual" aria-hidden="true">
+        <div class="spotlight-grid"></div>
+        <div class="spotlight-orb"></div>
       </div>
+      ${project.publicationMeta ? `<div class="project-top"><p class="project-top-note">${project.publicationMeta}</p></div>` : ""}
       <div class="project-content">
         <h3>${project.title}</h3>
         <p class="project-description">${project.description}</p>
         <div class="education-divider"></div>
         ${links ? `<div class="project-links">${links}</div>` : ""}
         <div class="project-tags">${tags}</div>
-        ${project.link ? `<a class="project-link" href="${project.link}" target="_blank" rel="noreferrer">${project.linkLabel || "Open Link"}</a>` : ""}
       </div>
     `;
 
