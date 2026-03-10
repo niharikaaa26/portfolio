@@ -127,6 +127,12 @@ const portfolioData = {
       description:
         "Built a role-based Ruby on Rails application for multiplex operations, covering show browsing, ticket booking and cancellation, user account management, and admin workflows with validations and real-time seat updates.",
       tags: ["Ruby", "Ruby on Rails", "Docker", "HTML", "JavaScript"],
+      links: [
+        {
+          label: "View GitHub Repo",
+          url: "https://github.com/niharikaaa26/movie-ticketing.git"
+        }
+      ],
       theme: "teal"
     },
     {
