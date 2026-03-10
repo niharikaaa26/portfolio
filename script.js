@@ -262,10 +262,9 @@ function renderFeaturedSkills(items) {
   if (!host) return;
   host.innerHTML = "";
 
-  items.forEach((item, index) => {
+  items.forEach((item) => {
     const chip = document.createElement("span");
-    chip.className = "about-stack-chip";
-    if (index % 2 === 0) chip.classList.add("is-accent");
+    chip.className = "about-stack-chip is-accent";
     chip.textContent = item;
     host.appendChild(chip);
   });
