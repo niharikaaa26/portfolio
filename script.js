@@ -489,7 +489,12 @@ function hydrate() {
   const heroAvatar = byId("heroAvatar");
   if (heroAvatar) {
     if (portfolioData.hero.profileImage) {
-      heroAvatar.innerHTML = `<img class="hero-avatar-image" src="${portfolioData.hero.profileImage}" alt="${portfolioData.hero.name}" />`;
+      heroAvatar.classList.add("has-photo");
+      heroAvatar.setAttribute("aria-label", portfolioData.hero.name);
+      heroAvatar.innerHTML = `<div class="hero-avatar-photo" style="background-image: url('${portfolioData.hero.profileImage}');"></div><div class="hero-avatar-shield" aria-hidden="true"></div>`;
+      ["contextmenu", "dragstart", "selectstart"].forEach((eventName) => {
+        heroAvatar.addEventListener(eventName, (event) => event.preventDefault());
+      });
     } else {
       heroAvatar.textContent = portfolioData.hero.avatarText || portfolioData.brandName;
     }
