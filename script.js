@@ -2,14 +2,14 @@ const portfolioData = {
   navBrand: "N",
   brandName: "Niharika Maruvanahalli Suresh",
   hero: {
-    kicker: "Backend engineering and full-stack product execution",
+    kicker: "Backend systems, full-stack builds, and product thinking",
     name: "Niharika Maruvanahalli Suresh",
     avatarText: "NS",
     profileImage: "assets/profile.jpeg",
     headline:
       "Engineering reliable platforms that <span class=\"accent\">simplify complex workflows</span>",
     summary:
-      "I build backend services and full-stack products that turn ambiguous requirements into scalable, production-ready software.",
+      "I build backend services and full-stack products that turn ambiguity into scalable, production-ready software.",
     resumeUrl: "https://drive.google.com/file/d/1OCyG72Tsq8snDrwoAtCrNQbpGA_6E1uE/view?usp=sharing"
   },
   about: {
