@@ -1071,6 +1071,39 @@ p {
   min-height: 320px;
 }
 
+.about-story-accent {
+  position: absolute;
+  right: -2rem;
+  bottom: -2.5rem;
+  width: 290px;
+  height: 220px;
+  pointer-events: none;
+}
+
+.about-story-orb {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(96, 165, 250, 0.34), rgba(34, 211, 238, 0.12) 52%, rgba(5, 7, 13, 0) 72%);
+  filter: blur(4px);
+  opacity: 0.9;
+}
+
+.about-story-glow {
+  position: absolute;
+  right: 42px;
+  bottom: 34px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(191, 219, 254, 0.18), rgba(34, 211, 238, 0.02) 68%, transparent 72%);
+  filter: blur(18px);
+}
+
 .about-story-card h2 {
   max-width: 14ch;
   font-size: clamp(2.8rem, 5vw, 4.4rem);
@@ -1280,6 +1313,25 @@ p {
   .about-story-card {
     min-height: auto;
     padding: 1.35rem;
+  }
+
+  .about-story-accent {
+    width: 180px;
+    height: 140px;
+    right: -1rem;
+    bottom: -1.25rem;
+  }
+
+  .about-story-orb {
+    width: 140px;
+    height: 140px;
+  }
+
+  .about-story-glow {
+    width: 90px;
+    height: 90px;
+    right: 28px;
+    bottom: 24px;
   }
 
   .project-spotlight-grid {
