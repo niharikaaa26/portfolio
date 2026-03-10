@@ -153,6 +153,12 @@ const portfolioData = {
       description:
         "Built a collaborative filtering recommendation system using SVD and evaluated it with RMSE and MAE through cross-validation. Performed tuning and error analysis to understand how latent factors, regularization, and user behavior influence recommendation quality.",
       tags: ["Machine Learning", "Collaborative Filtering", "Matrix Factorization", "Python"],
+      links: [
+        {
+          label: "View GitHub Repo",
+          url: "https://github.com/niharikaaa26/movie-recommendation.git"
+        }
+      ],
       theme: "blue"
     },
     {
