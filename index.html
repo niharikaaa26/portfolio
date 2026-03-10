@@ -1,0 +1,166 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Template</title>
+    <meta
+      name="description"
+      content="Responsive portfolio template with education, experience, skills, projects, and contact sections."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a href="#top" class="brand" id="brandName">Your Name</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">Menu</button>
+        <nav class="nav" id="nav">
+          <a href="#about">About</a>
+          <a href="#education">Education</a>
+          <a href="#work">Work</a>
+          <a href="#projects">Projects</a>
+          <a href="#resume">Resume</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-shell">
+          <div class="hero-grid">
+            <div class="hero-avatar-block">
+              <div class="hero-avatar-ring">
+                <div class="hero-avatar" id="heroAvatar">N</div>
+              </div>
+            </div>
+
+            <div class="hero-copy">
+              <p class="kicker" id="heroKicker">Portfolio</p>
+              <p class="hero-nameplate" id="heroName">Your Name</p>
+              <h1 class="hero-headline" id="heroHeadline">
+                Add your one-line professional summary here.
+              </h1>
+              <p class="hero-summary" id="heroSummary">
+                Add a short personal introduction. Highlight your strengths, interests, and impact.
+              </p>
+              <div class="hero-cta">
+                <a class="btn primary" id="resumeBtn" href="#work">Explore My Work</a>
+                <a class="btn ghost" href="#contact">Contact</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="about">
+        <div class="container">
+          <div class="about-layout">
+            <article class="about-story-card">
+              <p class="section-label">About</p>
+              <h2 id="aboutLead">Building software that turns ambiguity into reliable execution.</h2>
+              <p id="aboutBody">
+                Engineer focused on backend systems, distributed workflows, and full-stack delivery.
+              </p>
+            </article>
+
+            <div class="about-side">
+              <article class="about-mini-card">
+                <p class="section-label">Work Style</p>
+                <h3 id="aboutCollabTitle">I work well across time zones, stakeholders, and shifting priorities.</h3>
+              </article>
+
+              <article class="about-stack-card">
+                <p class="section-label">Stack</p>
+                <p class="about-stack-intro">I am constantly refining and expanding my skills.</p>
+                <h3 class="about-stack-title">My tech stack is my toolkit.</h3>
+                <div class="about-stack-cloud" id="aboutStackCloud"></div>
+              </article>
+
+              <article class="about-cert-card">
+                <p class="section-label">Certifications</p>
+                <div class="about-cert-links" id="certificationList"></div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="education">
+        <div class="container">
+          <div class="section-head section-head-centered">
+            <h2>Education</h2>
+            <p>My academic journey in computer science and technology</p>
+          </div>
+          <div class="grid two" id="educationList"></div>
+        </div>
+      </section>
+
+      <section class="section alt" id="work">
+        <div class="container">
+          <div class="section-head section-head-centered">
+            <h2>Experience</h2>
+            <p>Building backend systems, full-stack products, and production-ready platforms across industry and research roles.</p>
+          </div>
+          <div class="stack" id="workList"></div>
+        </div>
+      </section>
+
+      <section class="section alt" id="projects">
+        <div class="container">
+          <div class="section-head section-head-centered">
+            <h2>Projects</h2>
+            <p>Selected work that shows product thinking, engineering depth, and execution.</p>
+          </div>
+          <div class="project-spotlight-grid" id="projectList"></div>
+        </div>
+      </section>
+
+      <section class="section" id="resume">
+        <div class="container">
+          <div class="resume-banner">
+            <div class="resume-copy">
+              <p class="section-label">Resume</p>
+              <h2>Want the full story behind the systems, clients, and outcomes?</h2>
+              <p>
+                See the full picture of my backend engineering work, client delivery experience, graduate coursework, and the projects that shaped my approach to building reliable software.
+              </p>
+            </div>
+            <div class="resume-action">
+              <a class="btn resume-cta" id="resumeBannerBtn" href="#" target="_blank" rel="noreferrer">Open Resume</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="contact-layout">
+            <div class="contact-left">
+              <h2>Let's Connect</h2>
+              <p id="contactText">Add your preferred contact details and availability.</p>
+
+              <div class="contact-info-list" id="contactInfoList"></div>
+              <div class="follow-links" id="contactLinks"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <p id="footerLine"></p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
