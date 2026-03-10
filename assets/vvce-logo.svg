@@ -1,0 +1,45 @@
+<svg width="180" height="180" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Vidyavardhaka College of Engineering">
+  <defs>
+    <linearGradient id="vvceGold" x1="90" y1="18" x2="90" y2="146" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#F0DD6E"/>
+      <stop offset="100%" stop-color="#C39D33"/>
+    </linearGradient>
+    <path id="vvceTopArc" d="M48 55 A42 42 0 0 1 132 55" fill="none"/>
+    <path id="vvceBottomArc" d="M48 103 A42 42 0 0 0 132 103" fill="none"/>
+  </defs>
+  <g transform="translate(90 80)">
+    <g fill="#3B2369">
+      <rect x="-6" y="-63" width="12" height="18" rx="2"/>
+      <rect x="-6" y="45" width="12" height="18" rx="2"/>
+      <rect x="-63" y="-6" width="18" height="12" rx="2"/>
+      <rect x="45" y="-6" width="18" height="12" rx="2"/>
+      <rect x="-6" y="-63" width="12" height="18" rx="2" transform="rotate(30)"/>
+      <rect x="-6" y="-63" width="12" height="18" rx="2" transform="rotate(60)"/>
+      <rect x="-6" y="-63" width="12" height="18" rx="2" transform="rotate(90)"/>
+      <rect x="-6" y="-63" width="12" height="18" rx="2" transform="rotate(120)"/>
+      <rect x="-6" y="-63" width="12" height="18" rx="2" transform="rotate(150)"/>
+      <rect x="-6" y="-63" width="12" height="18" rx="2" transform="rotate(180)"/>
+      <rect x="-6" y="-63" width="12" height="18" rx="2" transform="rotate(210)"/>
+      <rect x="-6" y="-63" width="12" height="18" rx="2" transform="rotate(240)"/>
+      <rect x="-6" y="-63" width="12" height="18" rx="2" transform="rotate(270)"/>
+      <rect x="-6" y="-63" width="12" height="18" rx="2" transform="rotate(300)"/>
+      <rect x="-6" y="-63" width="12" height="18" rx="2" transform="rotate(330)"/>
+    </g>
+    <circle r="58" fill="url(#vvceGold)" stroke="#3B2369" stroke-width="3.5"/>
+    <circle r="45" fill="#E7D989" stroke="#3B2369" stroke-width="2.5"/>
+    <circle r="36" fill="#9FD4C5" stroke="#3B2369" stroke-width="2"/>
+    <path d="M-20 15h40" stroke="#3B2369" stroke-width="2"/>
+    <path d="M-14 24h28" stroke="#3B2369" stroke-width="1.8"/>
+    <path d="M-5 -16h10v36H-5z" fill="#F7F7F1" stroke="#3B2369" stroke-width="1.8"/>
+    <path d="M-14 -23h28l-4 7h-20z" fill="#F7F7F1" stroke="#3B2369" stroke-width="1.8"/>
+    <path d="M-27 13l10-17 10 17z" fill="#F7F7F1" stroke="#3B2369" stroke-width="1.8"/>
+    <path d="M14 8c5-11 12-15 20-16-2 8-6 15-13 21" fill="none" stroke="#3B2369" stroke-width="1.8" stroke-linecap="round"/>
+    <path d="M24 -3c-3 6-6 13-7 20" fill="none" stroke="#3B2369" stroke-width="1.8" stroke-linecap="round"/>
+  </g>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="6.2" font-weight="700" fill="#20192D">
+    <textPath href="#vvceTopArc" startOffset="50%" text-anchor="middle">VIDYAVARDHAKA</textPath>
+  </text>
+  <text font-family="Arial, Helvetica, sans-serif" font-size="5.8" font-weight="700" fill="#20192D">
+    <textPath href="#vvceBottomArc" startOffset="50%" text-anchor="middle">COLLEGE OF ENGINEERING</textPath>
+  </text>
+</svg>

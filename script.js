@@ -31,6 +31,8 @@ const portfolioData = {
     {
       degree: "Master of Computer Science",
       institution: "North Carolina State University",
+      logoSrc: "assets/nc-state-logo.svg",
+      logoAlt: "North Carolina State University",
       location: "Raleigh, NC",
       period: "Aug 2024 - May 2026",
       highlights: [
@@ -42,6 +44,8 @@ const portfolioData = {
     {
       degree: "Bachelor of Engineering in Computer Science and Engineering",
       institution: "Vidyavardhaka College of Engineering",
+      logoSrc: "assets/vvce_logo.jpg",
+      logoAlt: "Vidyavardhaka College of Engineering",
       location: "Mysuru, India",
       period: "Aug 2017 - May 2021",
       highlights: [
@@ -55,6 +59,8 @@ const portfolioData = {
     {
       role: "Application Development Analyst",
       company: "Accenture",
+      logoSrc: "assets/accenture-logo.svg",
+      logoAlt: "Accenture",
       client: "Clients: TELUS WNP, Canada and Functional Engineering Compliance-as-Code Platform",
       period: "Nov 2021 - Jun 2024",
       location: "Bengaluru, India",
@@ -76,6 +82,8 @@ const portfolioData = {
     {
       role: "Machine Learning Intern",
       company: "Verzeo",
+      logoSrc: "assets/verzeo-logo.svg",
+      logoAlt: "Verzeo",
       period: "Jul 2019 - Sep 2019",
       location: "Remote",
       type: "Internship",
@@ -200,7 +208,7 @@ const portfolioData = {
     }
   ],
   contact: {
-    text: "Interested in backend systems, full-stack roles, or building something meaningful together? Reach out directly and let us start the conversation.",
+    text: "Open to conversations, collaborations, and opportunities. Reach out and let us connect.",
     infoCards: [
       {
         title: "Email",
@@ -298,13 +306,13 @@ function renderEducation(items) {
     article.innerHTML = `
       <div class="education-top">
         <div class="education-badge">
-          <img class="education-badge-icon" src="assets/icon-education.svg" alt="Education" />
+          <img class="education-badge-icon" src="${entry.logoSrc || "assets/icon-education.svg"}" alt="${entry.logoAlt || "Education"}" />
         </div>
         <p class="education-period">${entry.period}</p>
       </div>
       <h3>${entry.degree}</h3>
       <div class="education-facts">
-        <p class="education-fact">${entry.institution}${entry.location ? `, ${entry.location}` : ""}</p>
+        <p class="education-fact education-institution"><strong>${entry.institution}${entry.location ? `, ${entry.location}` : ""}</strong></p>
       </div>
       <div class="education-divider"></div>
       <div class="education-highlights">
@@ -331,16 +339,19 @@ function renderWork(items) {
     article.innerHTML = `
       <div class="experience-top">
         <div class="education-badge">
-          <img class="education-badge-icon" src="assets/icon-briefcase.svg" alt="Experience" />
+          <img class="education-badge-icon experience-badge-icon" src="${entry.logoSrc || "assets/icon-briefcase.svg"}" alt="${entry.logoAlt || "Experience"}" />
         </div>
-        <p class="education-period">${entry.period}</p>
+        <div class="experience-meta">
+          <p class="education-period">${entry.period}</p>
+          <p class="experience-type-badge">${entry.type}</p>
+        </div>
       </div>
       <div class="experience-card">
         <h3>${entry.role}</h3>
-        <div class="education-facts">
-          <p class="education-fact"><strong>${entry.company}</strong>${entry.client ? `, ${entry.client}` : ""}</p>
+        <div class="experience-facts">
+          <p class="education-fact experience-company"><strong>${entry.company}</strong></p>
           <p class="education-fact">${entry.location}</p>
-          <p class="education-fact experience-type-line">${entry.type}</p>
+          ${entry.client ? `<p class="education-fact experience-client">${entry.client}</p>` : ""}
         </div>
         <div class="education-divider"></div>
         <p class="experience-detail">${entry.detail}</p>

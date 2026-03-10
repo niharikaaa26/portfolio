@@ -1,0 +1,9 @@
+<svg width="160" height="160" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Accenture">
+  <defs>
+    <linearGradient id="accentureGradient" x1="24" y1="35" x2="126" y2="123" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B72CFF"/>
+      <stop offset="1" stop-color="#7B1FFF"/>
+    </linearGradient>
+  </defs>
+  <path d="M35 43L124 75.5L35 117V88.5L78.5 75.5L35 71V43Z" fill="url(#accentureGradient)"/>
+</svg>

@@ -415,8 +415,8 @@ p {
 }
 
 .education-badge {
-  width: 58px;
-  height: 58px;
+  width: 72px;
+  height: 72px;
   display: grid;
   place-items: center;
   border-radius: 16px;
@@ -425,8 +425,8 @@ p {
 }
 
 .education-badge-icon {
-  width: 34px;
-  height: 34px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
 }
 
@@ -434,6 +434,10 @@ p {
   color: #9ca3af;
   font-size: 0.95rem;
   white-space: nowrap;
+}
+
+.education-institution {
+  color: #f3f4f6;
 }
 
 .education-card h3 {
@@ -584,10 +588,22 @@ p {
 
 .experience-top {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1rem;
   margin-bottom: 1.5rem;
+}
+
+.experience-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.55rem;
+}
+
+.experience-badge-icon {
+  width: 52px;
+  height: 52px;
 }
 
 .experience-card h3 {
@@ -596,9 +612,32 @@ p {
   color: #f3f4f6;
 }
 
-.experience-type-line {
+.experience-facts {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.experience-company {
+  color: #f3f4f6;
+}
+
+.experience-client {
+  color: #cbd5e1;
+}
+
+.experience-type-badge {
+  display: inline-flex;
+  align-self: flex-end;
+  align-items: center;
+  padding: 0.38rem 0.82rem;
+  border-radius: 999px;
+  border: 1px solid rgba(110, 231, 183, 0.22);
+  background: rgba(16, 185, 129, 0.08);
   color: #d1fae5;
   font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  margin: 0;
 }
 
 .experience-detail {
