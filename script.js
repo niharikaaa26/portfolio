@@ -330,17 +330,13 @@ function renderWork(items) {
         <p class="education-period">${entry.period}</p>
       </div>
       <div class="experience-card">
-        <div class="experience-card-top">
-          <div class="experience-main">
-            <h3>${entry.role}</h3>
-            <p class="experience-company">${entry.company}</p>
-            ${entry.client ? `<p class="experience-client">${entry.client}</p>` : ""}
-          </div>
-          <div class="experience-meta">
-            <p class="experience-location">${entry.location}</p>
-            <span class="experience-type">${entry.type}</span>
-          </div>
+        <h3>${entry.role}</h3>
+        <div class="education-facts">
+          <p class="education-fact"><strong>${entry.company}</strong>${entry.client ? `, ${entry.client}` : ""}</p>
+          <p class="education-fact">${entry.location}</p>
+          <p class="education-fact experience-type-line">${entry.type}</p>
         </div>
+        <div class="education-divider"></div>
         <p class="experience-detail">${entry.detail}</p>
         <div class="experience-pills">${skills}</div>
       </div>
@@ -356,7 +352,7 @@ function renderProjects(projects) {
 
   projects.forEach((project) => {
     const card = document.createElement("article");
-    card.className = `project-card spotlight-card theme-${project.theme || "teal"}`;
+    card.className = "project-card project-box";
 
     const tags = (project.tags || [])
       .map((tag) => `<span class="tag">${tag}</span>`)
@@ -369,17 +365,19 @@ function renderProjects(projects) {
       .join("");
 
     card.innerHTML = `
-      <div class="spotlight-visual">
-        <div class="spotlight-orb"></div>
-        <div class="spotlight-grid"></div>
+      <div class="project-top">
+        <div class="education-badge">
+          <img class="education-badge-icon" src="assets/icon-project.svg" alt="Project" />
+        </div>
+        <p class="project-top-note">${project.publicationMeta || "Selected Project"}</p>
       </div>
-      <div class="spotlight-content">
+      <div class="project-content">
         <h3>${project.title}</h3>
-        <p>${project.description}</p>
+        <p class="project-description">${project.description}</p>
+        <div class="education-divider"></div>
         ${links ? `<div class="project-links">${links}</div>` : ""}
         <div class="project-tags">${tags}</div>
         ${project.link ? `<a class="project-link" href="${project.link}" target="_blank" rel="noreferrer">${project.linkLabel || "Open Link"}</a>` : ""}
-        ${project.publicationMeta ? `<p class="project-meta-note">${project.publicationMeta}</p>` : ""}
       </div>
     `;
 

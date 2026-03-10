@@ -27,11 +27,11 @@ body {
   font-family: "Source Sans 3", sans-serif;
   color: var(--text);
   background:
-    linear-gradient(rgba(17, 65, 58, 0.18) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(17, 65, 58, 0.18) 1px, transparent 1px),
-    radial-gradient(circle at 0% 0%, rgba(16, 185, 129, 0.12), transparent 28%),
-    radial-gradient(circle at 100% 100%, rgba(6, 95, 70, 0.14), transparent 26%),
-    linear-gradient(90deg, #041017 0%, #05231f 50%, #07312a 100%);
+    linear-gradient(rgba(26, 34, 58, 0.28) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 34, 58, 0.28) 1px, transparent 1px),
+    radial-gradient(circle at 100% 0%, rgba(16, 185, 129, 0.16) 0, transparent 32%),
+    radial-gradient(circle at 0% 100%, rgba(34, 211, 238, 0.12) 0, transparent 30%),
+    linear-gradient(180deg, rgba(3, 8, 19, 0.98), rgba(2, 8, 18, 0.96));
   background-size: 48px 48px, 48px 48px, auto, auto, auto;
 }
 
@@ -306,7 +306,7 @@ p {
   background:
     linear-gradient(rgba(26, 34, 58, 0.18) 1px, transparent 1px),
     linear-gradient(90deg, rgba(26, 34, 58, 0.18) 1px, transparent 1px),
-    linear-gradient(180deg, rgba(7, 11, 24, 0.82), rgba(5, 8, 18, 0.64));
+    linear-gradient(180deg, rgba(3, 8, 19, 0.92), rgba(2, 8, 18, 0.88));
   background-size: 48px 48px, 48px 48px, auto;
   border-top: 1px solid rgba(34, 211, 238, 0.08);
   border-bottom: 1px solid rgba(244, 114, 182, 0.08);
@@ -526,7 +526,7 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 0.9rem;
-  margin: 1rem 0 0.3rem;
+  margin: 0 0 1rem;
 }
 
 .project-links .project-link {
@@ -583,49 +583,14 @@ p {
 }
 
 .experience-card-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 1.5rem;
-  margin-bottom: 1rem;
-}
-
-.experience-main h3 {
+.experience-card h3 {
   font-size: clamp(1.3rem, 2.5vw, 1.75rem);
-  margin-bottom: 0.45rem;
+  margin-bottom: 1rem;
   color: #f3f4f6;
 }
 
-.experience-company {
-  color: #22d3ee;
-  font-weight: 700;
-}
-
-.experience-client {
-  margin-top: 0.35rem;
+.experience-type-line {
   color: #d1fae5;
-  font-size: 0.92rem;
-  font-weight: 600;
-}
-
-.experience-meta {
-  text-align: right;
-  min-width: 180px;
-}
-
-.experience-location {
-  color: #9ca3af;
-  font-size: 0.95rem;
-  margin-bottom: 0.35rem;
-}
-
-.experience-type {
-  display: inline-block;
-  margin-top: 0.25rem;
-  padding: 0.3rem 0.75rem;
-  border-radius: 999px;
-  background: linear-gradient(90deg, #c084fc, #a855f7);
-  color: #fff;
-  font-size: 0.75rem;
   font-weight: 700;
 }
 
@@ -651,6 +616,50 @@ p {
   color: #e5e7eb;
   font-size: 0.78rem;
   font-weight: 600;
+}
+
+.project-box {
+  background:
+    radial-gradient(circle at top center, rgba(59, 130, 246, 0.08), transparent 45%),
+    linear-gradient(180deg, rgba(3, 8, 19, 0.98), rgba(2, 8, 18, 0.96));
+  border: 1px solid rgba(34, 211, 238, 0.12);
+  border-radius: 22px;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.32);
+  padding: 2rem;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.project-box:hover,
+.project-box:focus-within {
+  border-color: rgba(52, 211, 153, 0.45);
+  box-shadow: 0 0 0 3px rgba(52, 211, 153, 0.08), 0 20px 42px rgba(0, 0, 0, 0.36);
+  transform: translateY(-3px);
+}
+
+.project-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.7rem;
+}
+
+.project-top-note {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  text-align: right;
+}
+
+.project-content h3 {
+  font-size: clamp(1.45rem, 2.8vw, 1.95rem);
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #f3f4f6;
+}
+
+.project-description {
+  color: #aeb7c6;
+  line-height: 1.65;
 }
 
 .skill-list {
@@ -1278,10 +1287,9 @@ p {
   gap: 1.4rem;
   padding: 2.2rem;
   background:
-    radial-gradient(circle at top left, rgba(34, 211, 238, 0.22), transparent 28%),
-    radial-gradient(circle at bottom right, rgba(52, 211, 153, 0.18), transparent 30%),
-    linear-gradient(135deg, rgba(9, 24, 49, 0.98), rgba(12, 52, 71, 0.94) 52%, rgba(6, 95, 70, 0.9));
-  border: 1px solid rgba(110, 231, 183, 0.2);
+    radial-gradient(circle at top center, rgba(59, 130, 246, 0.08), transparent 45%),
+    linear-gradient(180deg, rgba(3, 8, 19, 0.98), rgba(2, 8, 18, 0.96));
+  border: 1px solid rgba(34, 211, 238, 0.12);
 }
 
 .resume-banner h2 {
@@ -1301,7 +1309,7 @@ p {
 
 .resume-cta {
   padding: 0.95rem 1.4rem;
-  border: 2px solid rgba(110, 231, 183, 0.4);
+  border: 2px solid rgba(34, 211, 238, 0.28);
   background: rgba(3, 10, 22, 0.72);
   color: #ecfeff;
 }
