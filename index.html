@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niharika M S | Software Engineer</title>
+  <meta name="description" content="Netflix-style software engineering portfolio for Niharika Maruvanahalli Suresh — backend, distributed systems, cloud, full-stack, and AI validation work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header" id="siteHeader">
+    <a href="#home" class="brand">NIHARIKA<span>FLIX</span></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#home">Home</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="resume-pill" href="./resume.pdf" target="_blank" rel="noopener">Resume</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+  </header>
+
+  <nav class="mobile-nav" id="mobileNav" aria-label="Mobile navigation">
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Now showcasing · Software Engineering Portfolio</p>
+        <h1>Niharika Maruvanahalli Suresh</h1>
+        <p class="hero-summary">Software Engineer focused on Java/Spring Boot microservices, distributed workflows, cloud-native systems, SQL performance, and full-stack product delivery.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="#projects">▶ Explore My Work</a>
+          <a class="secondary-btn" href="mailto:nihams2626@gmail.com">Contact Me</a>
+        </div>
+        <div class="hero-stats" aria-label="Portfolio highlights">
+          <div><strong>2.7+</strong><span>Years Experience</span></div>
+          <div><strong>20K+</strong><span>Daily Requests</span></div>
+          <div><strong>99.9%</strong><span>Uptime Supported</span></div>
+          <div><strong>25%</strong><span>Latency Reduced</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="experience">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Season 01</p>
+        <h2>Production Experience</h2>
+        <p>Real client systems, measurable reliability, and backend ownership.</p>
+      </div>
+      <div class="billboard-card reveal">
+        <div>
+          <p class="label">Featured Role</p>
+          <h3>Application Development Analyst · Accenture</h3>
+          <p class="muted">Nov 2021 – Jun 2024 · Bangalore, India</p>
+          <p>Re-architected telecom workflows into Java/Spring Boot microservices, built Kafka-based asynchronous pipelines, optimized API and database performance, and supported high-availability production systems.</p>
+          <div class="tag-row">
+            <span>Java</span><span>Spring Boot</span><span>Kafka</span><span>SQL</span><span>AWS</span><span>Kubernetes</span><span>REST APIs</span>
+          </div>
+        </div>
+        <div class="rating-card">
+          <span>Impact Score</span>
+          <strong>Top Match</strong>
+          <p>Backend · Cloud · Distributed Systems</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Continue Watching</p>
+        <h2>Featured Projects</h2>
+        <p>Cards are designed like Netflix rows: fast to scan, easy to click, and recruiter-friendly.</p>
+      </div>
+
+      <div class="row reveal">
+        <article class="project-card featured-card">
+          <div class="poster gradient-red">SNAP</div>
+          <div class="card-content">
+            <p class="label">Distributed Systems</p>
+            <h3>SnapSpec · Distributed Snapshots</h3>
+            <p>Built a C++/Python distributed snapshot prototype comparing Pause-and-Snap, Two-Phase Commit, and Speculative coordination under Redirect-on-Write snapshots.</p>
+            <div class="tag-row"><span>C++</span><span>Python</span><span>TCP</span><span>MySQL</span><span>Fault Tolerance</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="poster gradient-purple">CLOUD</div>
+          <div class="card-content">
+            <p class="label">Cloud Infrastructure</p>
+            <h3>High Availability WordPress</h3>
+            <p>Designed a resilient AWS deployment using EC2, ALB, Auto Scaling, RDS, S3, CloudWatch, and Kubernetes concepts.</p>
+            <div class="tag-row"><span>AWS</span><span>ALB</span><span>RDS</span><span>Auto Scaling</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="poster gradient-blue">SQL</div>
+          <div class="card-content">
+            <p class="label">Database Systems</p>
+            <h3>Inventory Management System</h3>
+            <p>Modeled BOM, FEFO, batch traceability, normalized schemas, indexing strategy, stored procedures, and triggers.</p>
+            <div class="tag-row"><span>SQL</span><span>Indexing</span><span>Triggers</span><span>Procedures</span></div>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="poster gradient-green">AI</div>
+          <div class="card-content">
+            <p class="label">Full Stack + AI</p>
+            <h3>Compliance-as-Code Validation</h3>
+            <p>Built React and Go/Python workflows for CI/CD-integrated compliance checks and LLM-assisted semi-structured validation.</p>
+            <div class="tag-row"><span>React</span><span>Go</span><span>Python</span><span>LLM</span><span>PostgreSQL</span></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Top Picks for Recruiters</p>
+        <h2>Skill Collections</h2>
+      </div>
+      <div class="skill-grid reveal">
+        <div class="skill-box"><h3>Backend</h3><p>Java, Spring Boot, REST, GraphQL, Flask, Node.js, JPA, API design</p></div>
+        <div class="skill-box"><h3>Cloud & DevOps</h3><p>AWS, GCP, Docker, Kubernetes, Terraform, Jenkins, GitHub Actions, Helm</p></div>
+        <div class="skill-box"><h3>Data</h3><p>PostgreSQL, MySQL, DynamoDB, Oracle, indexing, query tuning, stored procedures</p></div>
+        <div class="skill-box"><h3>Distributed Systems</h3><p>Kafka, Pub/Sub, SQS, TCP/IP, concurrency, fault tolerance, observability</p></div>
+      </div>
+    </section>
+
+    <section class="section split" id="education">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Because You Watched: Systems Engineering</p>
+        <h2>Education & Certifications</h2>
+        <p><strong>Master of Computer Science</strong>, North Carolina State University · 2026</p>
+        <p><strong>B.E. Computer Science</strong>, Vidyavardhaka College of Engineering · 2021</p>
+      </div>
+      <div class="cert-card reveal">
+        <h3>Certifications</h3>
+        <p>AWS Certified Cloud Practitioner</p>
+        <p>Google Cloud Associate Cloud Engineer</p>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="contact-panel reveal">
+        <p class="eyebrow">Final Episode</p>
+        <h2>Ready to build reliable software together?</h2>
+        <p>I’m actively seeking full-time Software Engineering roles where I can contribute to backend, cloud, distributed systems, and full-stack teams.</p>
+        <div class="hero-actions">
+          <a class="primary-btn" href="mailto:nihams2626@gmail.com">Email Me</a>
+          <a class="secondary-btn" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="secondary-btn" href="https://github.com/niharikaaa26" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Niharika Maruvanahalli Suresh · Designed as a Netflix-style engineering portfolio.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
