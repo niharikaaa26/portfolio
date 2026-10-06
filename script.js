@@ -7,14 +7,14 @@ const portfolioData = {
     avatarText: "NS",
     profileImage: "assets/profile.jpeg",
     headline:
-      "I build reliable software<span class=\"accent\">—from customer-facing experiences to the services and data behind them.</span>",
+      "I turn complex problems into<span class=\"accent\"> dependable software.</span>",
     summary:
       "My work spans healthcare applications, distributed telecom services, and AI-assisted automation. I build web experiences, APIs, and data workflows, and support them through testing, cloud deployment, and production operations.",
     resumeUrl: "https://drive.google.com/file/d/1TVfOh6EQPzj3kTCVGk0VhLWCLkEexZTa/view?usp=sharing"
   },
   about: {
     lead: "From product needs to dependable software.",
-    body: "I bring approximately three years of professional experience across software development and production support. I completed my Master of Computer Science at NC State in May 2026 and currently work as a Software Engineer Intern at healthcare company iSimcha in Durham, NC.",
+    body: "I bring approximately three years of professional experience across software development and production support. I completed my Master of Computer Science at NC State in May 2026 and currently work as a Software Engineer Intern at healthcare company iSimcha Health LLC in Durham, NC.",
     collaborationTitle: "Understand the problem. Build together. Own the follow-through.",
     collaborationBody: "I connect product needs with implementation details, collaborate on design and code review, and carry changes through testing, release, and ongoing improvement. My recent work emphasizes backend services and full-stack delivery.",
     aiBody: "At Accenture, I built Python and Go services that integrated LLM-assisted extraction and validation into compliance workflows. During development, I also use Claude Code alongside code review and automated checks."
@@ -121,7 +121,9 @@ const portfolioData = {
   work: [
     {
       role: "Software Engineer Intern",
-      company: "iSimcha",
+      company: "iSimcha Health LLC",
+      logoSrc: "assets/isimcha-logo.webp",
+      logoAlt: "iSimcha Health LLC logo",
       context: "Healthcare company · Collaborative application and report workflows",
       period: "Jul 2026–Present",
       location: "Durham, NC",
@@ -137,7 +139,7 @@ const portfolioData = {
       skills: ["React / Next.js", "TypeScript", "Python / Flask", "PostgreSQL", "GCP", "GitHub Actions / Terraform"]
     },
     {
-      role: "Software Engineer / Application Development Analyst",
+      role: "Software Engineer",
       company: "Accenture",
       logoSrc: "assets/accenture-logo.svg",
       logoAlt: "Accenture",
@@ -305,18 +307,15 @@ const portfolioData = {
     }
   ],
   contact: {
-    text: "Based in Durham, NC, and interested in software engineering opportunities. Reach out to discuss products, services, and the systems that connect them.",
-    infoCards: [
+    text: "Have a software engineering opportunity or a bold idea? Let's build something that makes a difference.",
+    infoCards: [],
+    links: [
       {
-        title: "Email",
-        value: "niharika.suresh26@gmail.com",
+        label: "Email",
         url: "mailto:niharika.suresh26@gmail.com",
         iconSrc: "assets/icon-email.svg",
-        iconAlt: "Email",
-        iconOnly: false
-      }
-    ],
-    links: [
+        iconAlt: "Email"
+      },
       {
         label: "GitHub",
         url: "https://github.com/niharikaaa26",
@@ -441,7 +440,7 @@ function renderWork(items) {
 
   items.forEach((entry) => {
     const article = document.createElement("article");
-    article.className = `experience-box${entry.company === "iSimcha" || entry.company === "Accenture" ? " experience-featured" : ""}`;
+    article.className = `experience-box${entry.company === "iSimcha Health LLC" || entry.company === "Accenture" ? " experience-featured" : ""}`;
     const skills = (entry.skills || [])
       .map((skill) => `<span class="experience-pill">${skill}</span>`)
       .join("");
@@ -552,7 +551,7 @@ function renderContactInfo(cards) {
       : `
       <div class="info-icon">${iconHtml}</div>
       <div>
-        <p class="info-title">${card.title}</p>
+        ${card.title ? `<p class="info-title">${card.title}</p>` : ""}
         <p class="info-value">${value}</p>
       </div>
     `;
@@ -655,8 +654,6 @@ function hydrate() {
 
   const resumeBannerBtn = byId("resumeBannerBtn");
   if (resumeBannerBtn) resumeBannerBtn.href = portfolioData.hero.resumeUrl;
-  const heroResumeBtn = byId("heroResumeBtn");
-  if (heroResumeBtn) heroResumeBtn.href = portfolioData.hero.resumeUrl;
 
   renderAbout();
   renderSkills(portfolioData.skillGroups);
@@ -670,4 +667,3 @@ function hydrate() {
 
 hydrate();
 setupMenu();
-
