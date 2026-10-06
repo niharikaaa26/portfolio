@@ -1446,3 +1446,102 @@ p {
   }
 }
 
+
+/* Readable achievements and keyboard navigation, using the existing palette. */
+.experience-achievements {
+  margin: 0 0 1.25rem;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.7rem;
+  color: #b6bfd0;
+  line-height: 1.6;
+}
+
+.experience-achievements li::marker {
+  color: var(--primary);
+}
+
+section[id], main[id] {
+  scroll-margin-top: 110px;
+}
+
+a:focus-visible, button:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 4px;
+}
+
+.skip-link {
+  position: fixed;
+  top: 0.75rem;
+  left: 0.75rem;
+  z-index: 100;
+  transform: translateY(-200%);
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 10px;
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+@media (max-width: 700px) {
+  .experience-top {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .education-period {
+    white-space: normal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+
+/* Keep the first screen compact and recent experience prominent. */
+.hero { padding-top: 2.6rem; }
+.hero-headline {
+  font-size: clamp(2rem, 3.5vw, 3.4rem);
+  line-height: 1.1;
+  max-width: 30ch;
+  letter-spacing: -0.035em;
+}
+.hero-summary { max-width: 74ch; font-size: 1.08rem; }
+.about-story-card h2 { font-size: clamp(2rem, 3.2vw, 3rem); max-width: 18ch; line-height: 1.1; }
+.about-mini-card { min-height: auto; }
+.about-mini-card h3 { font-size: clamp(1.4rem, 2.2vw, 2rem); line-height: 1.2; margin-bottom: 1rem; }
+.about-mini-card p:not(.section-label), #aboutAiBody { color: #b6bfd0; }
+.about-ai-title { font-size: 1.35rem; line-height: 1.3; margin-bottom: 0.8rem; }
+.experience-featured { grid-column: 1 / -1; }
+.skill-groups { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.skill-group { padding: 1.5rem; border: 1px solid rgba(34, 211, 238, 0.15); border-radius: 22px; background: rgba(3, 8, 19, 0.94); }
+.skill-group h3 { font-size: 1.15rem; margin-bottom: 1rem; color: #dffcf2; }
+.skill-group-list { margin: 0; padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.skill-group-list li { padding: 0.25rem 0.65rem; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 999px; color: #b6bfd0; line-height: 1.5; }
+.project-period { color: var(--muted); margin-bottom: 0.8rem; font-size: 0.95rem; }
+.project-results { color: #b6bfd0; margin: 1rem 0 0; padding-left: 1.2rem; display: grid; gap: 0.6rem; line-height: 1.6; }
+.project-results li::marker { color: var(--primary); }
+.resume-banner h2 { font-size: clamp(1.8rem, 3.2vw, 2.8rem); max-width: 22ch; }
+@media (max-width: 700px) {
+  .skill-groups { grid-template-columns: 1fr; }
+  .hero { padding-top: 1.5rem; }
+  .hero-grid { gap: 1.5rem; }
+  .hero-avatar-ring { width: 150px; height: 150px; }
+  .hero-cta { flex-direction: row; align-items: center; gap: 0.5rem; }
+  .hero-cta .btn { padding: 0.55rem 0.8rem; }
+}
+
+.contact-left, .contact-info-list, .info-card > div { min-width: 0; }
+.contact-info-list { max-width: 100%; }
+.info-card { max-width: 100%; }
+.info-value { overflow-wrap: anywhere; }
+
+@media (max-width: 700px) {
+  .hero-avatar-ring { width: 112px; height: 112px; }
+  .hero-grid { gap: 1rem; }
+  .hero-summary { font-size: 1rem; line-height: 1.55; }
+}

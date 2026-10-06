@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Niharika Maruvanahalli Suresh</title>
+    <title>Niharika Maruvanahalli Suresh | Software Engineer</title>
     <meta
       name="description"
-      content="Niharika Maruvanahalli Suresh portfolio featuring backend engineering, full-stack development, experience, projects, and education."
+      content="Niharika Maruvanahalli Suresh, Software Engineer in Durham, NC. Explore healthcare applications, distributed services, AI-assisted automation, cloud deployments, and software projects."
     />
     <link rel="icon" type="image/svg+xml" href="assets/favicon-n.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,25 +15,27 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=20260310031258" />
+    <link rel="stylesheet" href="styles.css?v=20261006192022" />
   </head>
   <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header" id="top">
       <div class="container nav-wrap">
-        <a href="#top" class="brand" id="brandName">Your Name</a>
-        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">Menu</button>
-        <nav class="nav" id="nav">
+        <a href="#top" class="brand" id="brandName" aria-label="Niharika Maruvanahalli Suresh, back to top">N</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-controls="nav" aria-expanded="false">Menu</button>
+        <nav class="nav" id="nav" aria-label="Main navigation">
           <a href="#about">About</a>
+          <a href="#work">Experience</a>
           <a href="#education">Education</a>
-          <a href="#work">Work</a>
           <a href="#projects">Projects</a>
+          <a href="#skills">Skills</a>
           <a href="#resume">Resume</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
 
-    <main>
+    <main id="main" tabindex="-1">
       <section class="hero">
         <div class="container hero-shell">
           <div class="hero-grid">
@@ -44,17 +46,19 @@
             </div>
 
             <div class="hero-copy">
-              <p class="kicker" id="heroKicker">Portfolio</p>
-              <p class="hero-nameplate" id="heroName">Your Name</p>
+              <p class="kicker" id="heroKicker">Software Engineer · Durham, NC</p>
+              <p class="hero-nameplate" id="heroName">Niharika Maruvanahalli Suresh</p>
               <h1 class="hero-headline" id="heroHeadline">
-                Add your one-line professional summary here.
+                I build reliable software - from customer-facing experiences to the services and data behind them.
               </h1>
               <p class="hero-summary" id="heroSummary">
-                Add a short personal introduction. Highlight your strengths, interests, and impact.
+                My work spans healthcare applications, distributed telecom services, and AI-assisted automation. I build web experiences, APIs, and data workflows, and support them through testing, cloud deployment, and production operations.
               </p>
               <div class="hero-cta">
-                <a class="btn primary" id="resumeBtn" href="#work">Explore My Work</a>
-                <a class="btn ghost" href="#contact">Contact</a>
+                <a class="btn primary" id="resumeBtn" href="#work">View My Work</a>
+                <a class="btn ghost" id="heroResumeBtn" href="https://drive.google.com/file/d/1TVfOh6EQPzj3kTCVGk0VhLWCLkEexZTa/view?usp=sharing" target="_blank" rel="noreferrer">View Resume</a>
+                <a class="btn ghost" href="https://github.com/niharikaaa26" target="_blank" rel="noreferrer">GitHub</a>
+                <a class="btn ghost" href="#contact">Contact Me</a>
               </div>
             </div>
           </div>
@@ -66,9 +70,9 @@
           <div class="about-layout">
             <article class="about-story-card">
               <p class="section-label">About</p>
-              <h2 id="aboutLead">Building software that turns ambiguity into reliable execution.</h2>
+              <h2 id="aboutLead">From product needs to dependable software.</h2>
               <p id="aboutBody">
-                Engineer focused on backend systems, distributed workflows, and full-stack delivery.
+                Approximately three years of professional experience, a Master of Computer Science from NC State completed May 2026, and a current software engineering internship at healthcare company iSimcha.
               </p>
               <div class="about-story-accent" aria-hidden="true">
                 <div class="about-story-orb"></div>
@@ -78,15 +82,15 @@
 
             <div class="about-side">
               <article class="about-mini-card">
-                <p class="section-label">Work Style</p>
-                <h3 id="aboutCollabTitle">I work well across time zones, stakeholders, and shifting priorities.</h3>
+                <p class="section-label">How I Work</p>
+                <h3 id="aboutCollabTitle">Understand the problem. Build together. Own the follow-through.</h3>
+                <p id="aboutCollabBody"></p>
               </article>
 
               <article class="about-stack-card">
-                <p class="section-label">Stack</p>
-                <p class="about-stack-intro">I am constantly refining and expanding my skills.</p>
-                <h3 class="about-stack-title">My tech stack is my toolkit.</h3>
-                <div class="about-stack-cloud" id="aboutStackCloud"></div>
+                <p class="section-label">AI in Software Engineering</p>
+                <h3 class="about-ai-title">Workflow automation and development support</h3>
+                <p id="aboutAiBody"></p>
               </article>
 
               <article class="about-cert-card">
@@ -95,16 +99,6 @@
               </article>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="section" id="education">
-        <div class="container">
-          <div class="section-head section-head-centered">
-            <h2>Education</h2>
-            <p>Where systems thinking, software engineering, and data-driven problem solving took shape.</p>
-          </div>
-          <div class="grid two" id="educationList"></div>
         </div>
       </section>
 
@@ -118,6 +112,16 @@
         </div>
       </section>
 
+      <section class="section" id="education">
+        <div class="container">
+          <div class="section-head section-head-centered">
+            <h2>Education</h2>
+            <p>Where systems thinking, software engineering, and data-driven problem solving took shape.</p>
+          </div>
+          <div class="grid two" id="educationList"></div>
+        </div>
+      </section>
+
       <section class="section" id="projects">
         <div class="container">
           <div class="section-head section-head-centered">
@@ -128,18 +132,28 @@
         </div>
       </section>
 
+      <section class="section" id="skills">
+        <div class="container">
+          <div class="section-head section-head-centered">
+            <h2>Skills</h2>
+            <p>My strongest recent work is in backend services and full-stack delivery. These tools span professional work and projects; the achievements above show where I have applied them.</p>
+          </div>
+          <div class="skill-groups" id="skillGroups"></div>
+        </div>
+      </section>
+
       <section class="section" id="resume">
         <div class="container">
           <div class="resume-banner">
             <div class="resume-copy">
               <p class="section-label">Resume</p>
-              <h2>Want the full story behind the systems, clients, and outcomes?</h2>
+              <h2>Explore my software engineering experience.</h2>
               <p>
-                See the full picture of my backend engineering work, client delivery experience, graduate coursework, and the projects that shaped my approach to building reliable software.
+                Read about my software development, product delivery, production support, and project experience.
               </p>
             </div>
             <div class="resume-action">
-              <a class="btn resume-cta" id="resumeBannerBtn" href="#" target="_blank" rel="noreferrer">Open Resume</a>
+              <a class="btn resume-cta" id="resumeBannerBtn" href="https://drive.google.com/file/d/1TVfOh6EQPzj3kTCVGk0VhLWCLkEexZTa/view?usp=sharing" target="_blank" rel="noreferrer">Open Resume</a>
             </div>
           </div>
         </div>
@@ -150,7 +164,7 @@
           <div class="contact-layout">
             <div class="contact-left">
               <h2>Let's Connect</h2>
-              <p id="contactText">Add your preferred contact details and availability.</p>
+              <p id="contactText">Based in Durham, NC, and interested in software engineering opportunities.</p>
 
               <div class="contact-info-list" id="contactInfoList"></div>
               <div class="follow-links" id="contactLinks"></div>
@@ -166,6 +180,6 @@
       </div>
     </footer>
 
-    <script src="script.js?v=20260310031258"></script>
+    <script src="script.js?v=20261006192022"></script>
   </body>
 </html>

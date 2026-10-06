@@ -2,21 +2,84 @@ const portfolioData = {
   navBrand: "N",
   brandName: "Niharika Maruvanahalli Suresh",
   hero: {
-    kicker: "Backend systems, full-stack builds, and product thinking",
+    kicker: "Software Engineer · Durham, NC",
     name: "Niharika Maruvanahalli Suresh",
     avatarText: "NS",
     profileImage: "assets/profile.jpeg",
     headline:
-      "Engineering reliable platforms that <span class=\"accent\">simplify complex workflows</span>",
+      "I build reliable software<span class=\"accent\">—from customer-facing experiences to the services and data behind them.</span>",
     summary:
-      "I build backend services and full-stack products that turn ambiguity into scalable, production-ready software.",
-    resumeUrl: "https://drive.google.com/file/d/1OCyG72Tsq8snDrwoAtCrNQbpGA_6E1uE/view?usp=sharing"
+      "My work spans healthcare applications, distributed telecom services, and AI-assisted automation. I build web experiences, APIs, and data workflows, and support them through testing, cloud deployment, and production operations.",
+    resumeUrl: "https://drive.google.com/file/d/1TVfOh6EQPzj3kTCVGk0VhLWCLkEexZTa/view?usp=sharing"
   },
   about: {
-    lead: "I build dependable software systems that simplify complex operations and scale with business needs.",
-    collaborationTitle: "I thrive in collaborative environments where communication, ownership, and execution matter."
+    lead: "From product needs to dependable software.",
+    body: "I bring approximately three years of professional experience across software development and production support. I completed my Master of Computer Science at NC State in May 2026 and currently work as a Software Engineer Intern at healthcare company iSimcha in Durham, NC.",
+    collaborationTitle: "Understand the problem. Build together. Own the follow-through.",
+    collaborationBody: "I connect product needs with implementation details, collaborate on design and code review, and carry changes through testing, release, and ongoing improvement. My recent work emphasizes backend services and full-stack delivery.",
+    aiBody: "At Accenture, I built Python and Go services that integrated LLM-assisted extraction and validation into compliance workflows. During development, I also use Claude Code alongside code review and automated checks."
   },
-  featuredSkills: ["Java", "Spring Boot", "Python", "Go", "SQL", "React", "JavaScript"],
+  skillGroups: {
+    "Languages": [
+      "Java",
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "Go",
+      "SQL",
+      "C++"
+    ],
+    "Application Development": [
+      "React",
+      "Next.js",
+      "Node.js",
+      "Spring Boot",
+      "Flask",
+      "FastAPI",
+      "REST APIs",
+      "microservices",
+      "HTML",
+      "CSS"
+    ],
+    "Data and Messaging": [
+      "PostgreSQL",
+      "MySQL",
+      "Redis",
+      "DynamoDB",
+      "Prisma",
+      "SQLAlchemy",
+      "Kafka",
+      "Amazon SQS",
+      "Google Cloud Pub/Sub"
+    ],
+    "Cloud and Delivery": [
+      "AWS",
+      "GCP",
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "GitHub Actions",
+      "CI/CD",
+      "Linux",
+      "Git"
+    ],
+    "AI and Automation": [
+      "LLM-assisted extraction and validation",
+      "workflow automation",
+      "Claude Code"
+    ],
+    "Testing and Reliability": [
+      "pytest",
+      "unit and integration testing",
+      "regression testing",
+      "production troubleshooting",
+      "root-cause analysis",
+      "on-call support",
+      "CloudWatch",
+      "Splunk",
+      "SignalFx"
+    ]
+  },
   certifications: [
     {
       label: "AWS Certified Cloud Practitioner",
@@ -24,7 +87,7 @@ const portfolioData = {
     },
     {
       label: "Google Associate Cloud Engineer",
-      url: "https://drive.google.com/file/d/1IJ42FC_p7qQ0buH7E6GYKsFoTmYVe3Yh/view?usp=sharing"
+      url: "https://drive.google.com/file/d/1gPlDPxLXNtFhu2oXD0jg2ioL9qy_YA8a/view?usp=sharing"
     }
   ],
   education: [
@@ -47,7 +110,7 @@ const portfolioData = {
       logoSrc: "assets/vvce_logo.jpg",
       logoAlt: "Vidyavardhaka College of Engineering",
       location: "Mysuru, India",
-      period: "Aug 2017 - May 2021",
+      period: "Aug 2017 – Aug 2021",
       highlights: [
         "Coursework: Data Structures, Web Development, Operating Systems, Computer Networks, Artificial Intelligence, Machine Learning",
         "Built a strong systems and software engineering foundation",
@@ -57,17 +120,42 @@ const portfolioData = {
   ],
   work: [
     {
-      role: "Application Development Analyst",
+      role: "Software Engineer Intern",
+      company: "iSimcha",
+      context: "Healthcare company · Collaborative application and report workflows",
+      period: "Jul 2026–Present",
+      location: "Durham, NC",
+      type: "Internship",
+      achievements: [
+        "Implemented organization-specific branding with React, Next.js, and TypeScript across subdomains, landing pages, six authentication screens, and emails; improved responsive headers to preserve organization names and navigation.",
+        "Re-architected Python/Flask report generation into authenticated asynchronous jobs with GCP Cloud Tasks, Cloud Run, and Cloud Storage, separating submission from report rendering.",
+        "Restored report generation after PostgreSQL connection exhaustion by bounding the psycopg connection pool and correcting connection configuration.",
+        "Collaborated on the multi-investigator workflow, implementing all-or-none report delivery and persisting investigator snapshots in PostgreSQL to eliminate live warehouse lookups from the delivery page.",
+        "Automated staging deployments with GitHub Actions, Docker, and Terraform, using keyless GCP authentication and an Alembic migration gate.",
+        "Improved source-freshness tracking across 10+ sources, resolved eight review findings, and added 12 pytest regression tests."
+      ],
+      skills: ["React / Next.js", "TypeScript", "Python / Flask", "PostgreSQL", "GCP", "GitHub Actions / Terraform"]
+    },
+    {
+      role: "Software Engineer / Application Development Analyst",
       company: "Accenture",
       logoSrc: "assets/accenture-logo.svg",
       logoAlt: "Accenture",
       client: "Clients: TELUS WNP, Canada and Functional Engineering Compliance-as-Code Platform",
-      period: "Nov 2021 - Jun 2024",
+      period: "Nov 2021–Jun 2024",
       location: "Bengaluru, India",
       type: "Full-time",
-      detail:
-        "Delivered backend, distributed systems, and full-stack platform engineering across telecom and compliance domains using Java, Spring Boot, Kafka, Python, Go, React, SQL, and AWS. Built scalable microservices, workflow APIs, event-driven pipelines, and internal platform features while improving latency, database performance, reliability, and cloud-native delivery through CI/CD and containerized deployments.",
-      skills: ["Java", "Spring Boot", "Apache Kafka", "Python", "Go", "React", "AWS", "Docker", "Kubernetes", "PostgreSQL", "SQL"]
+      achievements: [
+        "Increased transaction capacity by 30% across Java/Spring Boot and Node.js telecom microservices handling 20K+ daily requests.",
+        "Developed secure REST APIs for external providers with Spring Security, JWT, RBAC, and JPA/JDBC; reduced API latency by 25% through backend and SQL optimization.",
+        "Built Kafka, Amazon SQS, and Pub/Sub pipelines processing 10K+ daily events, with Redis lookups and DynamoDB workflow state.",
+        "Built Python and Go services integrating LLM-assisted extraction and validation into compliance workflows, with React workflow features, reducing manual review effort by 50%.",
+        "Reduced PostgreSQL query latency by 40% through execution-plan analysis, indexing, and join optimization.",
+        "Led on-call support and root-cause analysis, supporting 99.9% uptime through monitoring and Docker/Kubernetes recovery.",
+        "Mentored junior developers during onboarding.",
+        "Executed 150+ functional and regression test cases supporting a near-zero-downtime migration."
+      ],
+      skills: ["Java / Spring Boot", "Node.js", "Python / Go", "React", "PostgreSQL", "Kafka / SQS / Pub/Sub", "AWS / GCP"]
     },
     {
       role: "Web Development Intern",
@@ -75,8 +163,7 @@ const portfolioData = {
       period: "Mar 2021 - Apr 2021",
       location: "Bengaluru, India",
       type: "Internship",
-      detail:
-        "Built responsive frontend components and integrated them with backend REST APIs in an Agile delivery environment, strengthening my full-stack collaboration skills.",
+      achievements: ["Built responsive frontend components and integrated them with backend REST APIs in an Agile delivery environment."],
       skills: ["HTML", "CSS", "JavaScript", "REST APIs", "Agile"]
     },
     {
@@ -87,24 +174,34 @@ const portfolioData = {
       period: "Jul 2019 - Sep 2019",
       location: "Remote",
       type: "Internship",
-      detail:
-        "Applied machine learning and statistics to fraud detection workflows by building and tuning classical models on 1M+ transactions and experimenting with deep learning approaches.",
+      achievements: ["Built and tuned classical fraud detection models on 1M+ transactions and experimented with deep learning approaches."],
       skills: ["Python", "Machine Learning", "SVM", "Random Forest", "Gradient Boosting", "Deep Learning"]
     }
   ],
   projects: [
     {
-      title: "Efficient Redirect-on-Write Snapshots for Multi-Node Storage Systems",
+      title: "SnapSpec — Distributed Storage Snapshots",
       description:
-        "Designed a distributed snapshot framework for multi-node storage systems using Redirect-on-Write (ROW) to enable near-instant snapshot creation. Implemented coordination protocols including Pause-and-Snap, Two-Phase, and Speculative Snapshot to capture consistent system states, and evaluated simulated workloads for snapshot latency, throughput, and distributed state consistency.",
-      tags: ["Distributed Systems", "Storage Systems", "Snapshots", "ROW", "Performance Evaluation"],
+        "Built a distributed storage snapshot prototype to capture consistent state with less coordination overhead. Implemented redirect-on-write and durable crash recovery.",
+      results: [
+        "Prototype tests across 10 configurations on three machines reduced median snapshot latency by 20–37% and control messages by 38% versus pause-based snapshots.",
+        "All tested snapshots passed consistency and restore checks."
+      ],
+      tags: ["C++", "Python", "MySQL", "Distributed Systems"],
+      links: [
+        {
+          label: "View Project Paper",
+          url: "https://drive.google.com/file/d/1xHc0BRLiUHhSIGQtz2nuhTNP6vbnkW1M/view?usp=sharing"
+        }
+      ],
       theme: "blue"
     },
     {
       title: "High Availability WordPress Deployment",
       description:
-        "Deployed a containerized WordPress application on AWS using Docker and Kubernetes with a fault-tolerant architecture built on EC2, Application Load Balancer, RDS MySQL, and S3. Implemented auto-scaling, load balancing, and CloudWatch-based monitoring for resilient cloud-native deployment.",
-      tags: ["Docker", "Kubernetes", "AWS", "EC2", "RDS", "S3", "CloudWatch"],
+        "Built a resilient WordPress deployment on AWS with Docker and Kubernetes. Used load balancing, managed databases, autoscaling, monitoring, and access controls to support changing demand.",
+      results: ["In a 100-user Locust load test, pods scaled from two to nine with no failed requests. These are test results, not production outcomes."],
+      tags: ["AWS", "Docker", "Kubernetes", "Locust"],
       theme: "teal"
     },
     {
@@ -208,15 +305,15 @@ const portfolioData = {
     }
   ],
   contact: {
-    text: "Open to conversations, collaborations, and opportunities. Reach out and let us connect.",
+    text: "Based in Durham, NC, and interested in software engineering opportunities. Reach out to discuss products, services, and the systems that connect them.",
     infoCards: [
       {
         title: "Email",
-        value: "Email",
+        value: "niharika.suresh26@gmail.com",
         url: "mailto:niharika.suresh26@gmail.com",
         iconSrc: "assets/icon-email.svg",
         iconAlt: "Email",
-        iconOnly: true
+        iconOnly: false
       }
     ],
     links: [
@@ -263,18 +360,28 @@ function renderAbout() {
     }
   }
   setText("aboutCollabTitle", portfolioData.about.collaborationTitle);
+  setText("aboutCollabBody", portfolioData.about.collaborationBody);
+  setText("aboutAiBody", portfolioData.about.aiBody);
 }
 
-function renderFeaturedSkills(items) {
-  const host = byId("aboutStackCloud");
+function renderSkills(groups) {
+  const host = byId("skillGroups");
   if (!host) return;
   host.innerHTML = "";
-
-  items.forEach((item) => {
-    const chip = document.createElement("span");
-    chip.className = "about-stack-chip is-accent";
-    chip.textContent = item;
-    host.appendChild(chip);
+  Object.entries(groups).forEach(([label, skills]) => {
+    const group = document.createElement("article");
+    group.className = "skill-group";
+    const heading = document.createElement("h3");
+    heading.textContent = label;
+    const list = document.createElement("ul");
+    list.className = "skill-group-list";
+    skills.forEach((skill) => {
+      const item = document.createElement("li");
+      item.textContent = skill;
+      list.appendChild(item);
+    });
+    group.append(heading, list);
+    host.appendChild(group);
   });
 }
 
@@ -284,8 +391,11 @@ function renderCertifications(items) {
   host.innerHTML = "";
 
   items.forEach((item) => {
-    const chip = document.createElement("div");
+    const chip = document.createElement("a");
     chip.className = "cert-link";
+    chip.href = item.url;
+    chip.target = "_blank";
+    chip.rel = "noreferrer";
     chip.textContent = item.label;
     host.appendChild(chip);
   });
@@ -331,7 +441,7 @@ function renderWork(items) {
 
   items.forEach((entry) => {
     const article = document.createElement("article");
-    article.className = "experience-box";
+    article.className = `experience-box${entry.company === "iSimcha" || entry.company === "Accenture" ? " experience-featured" : ""}`;
     const skills = (entry.skills || [])
       .map((skill) => `<span class="experience-pill">${skill}</span>`)
       .join("");
@@ -351,10 +461,11 @@ function renderWork(items) {
         <div class="experience-facts">
           <p class="education-fact experience-company"><strong>${entry.company}</strong></p>
           <p class="education-fact">${entry.location}</p>
+          ${entry.context ? `<p class="education-fact">${entry.context}</p>` : ""}
           ${entry.client ? `<p class="education-fact experience-client">${entry.client}</p>` : ""}
         </div>
         <div class="education-divider"></div>
-        <p class="experience-detail">${entry.detail}</p>
+        <ul class="experience-achievements">${(entry.achievements || []).map((achievement) => `<li>${achievement}</li>`).join("")}</ul>
         <div class="experience-pills">${skills}</div>
       </div>
     `;
@@ -388,7 +499,7 @@ function renderProjects(projects) {
     const links = actionLinks
       .map(
         (item) =>
-          `<a class="project-link" href="${item.url}" target="_blank" rel="noreferrer">${item.label}</a>`
+          `<a class="project-link" aria-label="${item.label}: ${project.title}" href="${item.url}" target="_blank" rel="noreferrer">${item.label}</a>`
       )
       .join("");
 
@@ -400,7 +511,9 @@ function renderProjects(projects) {
       ${project.publicationMeta ? `<div class="project-top"><p class="project-top-note">${project.publicationMeta}</p></div>` : ""}
       <div class="project-content">
         <h3>${project.title}</h3>
+        ${project.period ? `<p class="project-period">${project.period}</p>` : ""}
         <p class="project-description">${project.description}</p>
+        ${project.results ? `<ul class="project-results">${project.results.map((result) => `<li>${result}</li>`).join("")}</ul>` : ""}
         <div class="education-divider"></div>
         ${links ? `<div class="project-links">${links}</div>` : ""}
         <div class="project-tags">${tags}</div>
@@ -421,6 +534,7 @@ function renderContactInfo(cards) {
     article.className = `info-card${card.iconOnly ? " icon-only" : ""}`;
     if (card.url) {
       article.href = card.url;
+      article.setAttribute("aria-label", `Email ${portfolioData.contact.formTargetEmail}`);
       article.target = "_blank";
       article.rel = "noreferrer";
     }
@@ -456,6 +570,7 @@ function renderContacts(links) {
     const a = document.createElement("a");
     a.className = "contact-link";
     a.href = link.url;
+    a.setAttribute("aria-label", link.label);
     a.target = "_blank";
     a.rel = "noreferrer";
 
@@ -480,13 +595,36 @@ function setupMenu() {
   const nav = byId("nav");
   if (!btn || !nav) return;
 
-  btn.addEventListener("click", () => {
-    nav.classList.toggle("open");
-  });
+  function setOpen(open) {
+    nav.classList.toggle("open", open);
+    btn.setAttribute("aria-expanded", String(open));
+  }
+
+  btn.addEventListener("click", () => setOpen(!nav.classList.contains("open")));
 
   nav.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => nav.classList.remove("open"));
+    link.addEventListener("click", () => {
+      setOpen(false);
+      const target = document.querySelector(link.getAttribute("href"));
+      if (target) {
+        target.setAttribute("tabindex", "-1");
+        target.focus({ preventScroll: true });
+      }
+    });
   });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && nav.classList.contains("open")) {
+      setOpen(false);
+      btn.focus();
+    }
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!nav.contains(event.target) && !btn.contains(event.target)) setOpen(false);
+  });
+
+  window.matchMedia("(max-width: 860px)").addEventListener("change", () => setOpen(false));
 }
 
 function hydrate() {
@@ -501,6 +639,7 @@ function hydrate() {
   if (heroAvatar) {
     if (portfolioData.hero.profileImage) {
       heroAvatar.classList.add("has-photo");
+      heroAvatar.setAttribute("role", "img");
       heroAvatar.setAttribute("aria-label", portfolioData.hero.name);
       heroAvatar.innerHTML = `<div class="hero-avatar-photo" style="background-image: url('${portfolioData.hero.profileImage}');"></div><div class="hero-avatar-shield" aria-hidden="true"></div>`;
       ["contextmenu", "dragstart", "selectstart"].forEach((eventName) => {
@@ -516,9 +655,11 @@ function hydrate() {
 
   const resumeBannerBtn = byId("resumeBannerBtn");
   if (resumeBannerBtn) resumeBannerBtn.href = portfolioData.hero.resumeUrl;
+  const heroResumeBtn = byId("heroResumeBtn");
+  if (heroResumeBtn) heroResumeBtn.href = portfolioData.hero.resumeUrl;
 
   renderAbout();
-  renderFeaturedSkills(portfolioData.featuredSkills);
+  renderSkills(portfolioData.skillGroups);
   renderCertifications(portfolioData.certifications);
   renderEducation(portfolioData.education);
   renderWork(portfolioData.work);
