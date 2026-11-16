@@ -9,8 +9,7 @@ const portfolioData = {
     headline:
       "I turn complex problems into<span class=\"accent\"> dependable software.</span>",
     summary:
-      "My work spans healthcare applications, distributed telecom services, and AI-assisted automation. I build web experiences, APIs, and data workflows, and support them through testing, cloud deployment, and production operations.",
-    resumeUrl: "https://drive.google.com/file/d/1TVfOh6EQPzj3kTCVGk0VhLWCLkEexZTa/view?usp=sharing"
+      "My work spans healthcare applications, distributed telecom services, and AI-assisted automation. I build web experiences, APIs, and data workflows, and support them through testing, cloud deployment, and production operations."
   },
   about: {
     lead: "From product needs to dependable software.",
@@ -82,12 +81,10 @@ const portfolioData = {
   },
   certifications: [
     {
-      label: "AWS Certified Cloud Practitioner",
-      url: "https://drive.google.com/file/d/1_Qbzvyx5YG4P0BUPLQR0iNpxoo5yHZAe/view?usp=sharing"
+      label: "AWS Certified Cloud Practitioner"
     },
     {
-      label: "Google Associate Cloud Engineer",
-      url: "https://drive.google.com/file/d/1gPlDPxLXNtFhu2oXD0jg2ioL9qy_YA8a/view?usp=sharing"
+      label: "Google Associate Cloud Engineer"
     }
   ],
   education: [
@@ -390,11 +387,13 @@ function renderCertifications(items) {
   host.innerHTML = "";
 
   items.forEach((item) => {
-    const chip = document.createElement("a");
+    const chip = document.createElement(item.url ? "a" : "span");
     chip.className = "cert-link";
-    chip.href = item.url;
-    chip.target = "_blank";
-    chip.rel = "noreferrer";
+    if (item.url) {
+      chip.href = item.url;
+      chip.target = "_blank";
+      chip.rel = "noreferrer";
+    }
     chip.textContent = item.label;
     host.appendChild(chip);
   });
@@ -651,9 +650,6 @@ function hydrate() {
 
   const year = new Date().getFullYear();
   setText("footerLine", `${year} ${portfolioData.brandName}. All rights reserved.`);
-
-  const resumeBannerBtn = byId("resumeBannerBtn");
-  if (resumeBannerBtn) resumeBannerBtn.href = portfolioData.hero.resumeUrl;
 
   renderAbout();
   renderSkills(portfolioData.skillGroups);
