@@ -387,13 +387,8 @@ function renderCertifications(items) {
   host.innerHTML = "";
 
   items.forEach((item) => {
-    const chip = document.createElement(item.url ? "a" : "span");
+    const chip = document.createElement("span");
     chip.className = "cert-link";
-    if (item.url) {
-      chip.href = item.url;
-      chip.target = "_blank";
-      chip.rel = "noreferrer";
-    }
     chip.textContent = item.label;
     host.appendChild(chip);
   });
