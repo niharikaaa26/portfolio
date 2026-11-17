@@ -467,6 +467,16 @@ function setupMenu() {
   window.matchMedia("(max-width: 860px)").addEventListener("change", () => setOpen(false));
 }
 
+function setupBrandNavigation() {
+  const brand = byId("brandName");
+  if (!brand) return;
+
+  brand.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
+}
+
 function typeTextEffect(element, text, speed = 70) {
   if (!element || !text) return;
 
@@ -510,3 +520,4 @@ function hydrate() {
 
 hydrate();
 setupMenu();
+setupBrandNavigation();
