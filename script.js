@@ -1,91 +1,19 @@
 const portfolioData = {
-  navBrand: "N",
-  brandName: "Niharika Maruvanahalli Suresh",
-  hero: {
-    kicker: "Software Engineer · Durham, NC",
-    name: "Niharika Maruvanahalli Suresh",
-    avatarText: "NS",
-    profileImage: "assets/profile.jpeg",
-    headline:
-      "I turn complex problems into<span class=\"accent\"> dependable software.</span>",
-    summary:
-      "My work spans healthcare applications, distributed telecom services, and AI-assisted automation. I build web experiences, APIs, and data workflows, and support them through testing, cloud deployment, and production operations."
-  },
   about: {
-    lead: "From product needs to dependable software.",
-    body: "I bring approximately three years of professional experience across software development and production support. I completed my Master of Computer Science at NC State in May 2026 and currently work as a Software Engineer Intern at healthcare company iSimcha Health LLC in Durham, NC.",
-    collaborationTitle: "Understand the problem. Build together. Own the follow-through.",
-    collaborationBody: "I connect product needs with implementation details, collaborate on design and code review, and carry changes through testing, release, and ongoing improvement. My recent work emphasizes backend services and full-stack delivery.",
-    aiBody: "At Accenture, I built Python and Go services that integrated LLM-assisted extraction and validation into compliance workflows. During development, I also use Claude Code alongside code review and automated checks."
+    lead: "Engineer who owns the follow-through.",
+    body: "About three years of professional experience across telecom and healthcare, with a Master of Computer Science from NC State (May 2026). I build backend and full-stack software for real workflows; at Accenture, I cut API latency by 25% and PostgreSQL query latency by 40%. I focus on reliable delivery through testing, automation, and root-cause analysis, using Claude Code alongside code review and automated tests."
   },
   skillGroups: {
-    "Languages": [
-      "Java",
-      "Python",
-      "TypeScript",
-      "JavaScript",
-      "Go",
-      "SQL",
-      "C++"
-    ],
-    "Application Development": [
-      "React",
-      "Next.js",
-      "Node.js",
-      "Spring Boot",
-      "Flask",
-      "FastAPI",
-      "REST APIs",
-      "microservices",
-      "HTML",
-      "CSS"
-    ],
-    "Data and Messaging": [
-      "PostgreSQL",
-      "MySQL",
-      "Redis",
-      "DynamoDB",
-      "Prisma",
-      "SQLAlchemy",
-      "Kafka",
-      "Amazon SQS",
-      "Google Cloud Pub/Sub"
-    ],
-    "Cloud and Delivery": [
-      "AWS",
-      "GCP",
-      "Docker",
-      "Kubernetes",
-      "Terraform",
-      "GitHub Actions",
-      "CI/CD",
-      "Linux",
-      "Git"
-    ],
-    "AI and Automation": [
-      "LLM-assisted extraction and validation",
-      "workflow automation",
-      "Claude Code"
-    ],
-    "Testing and Reliability": [
-      "pytest",
-      "unit and integration testing",
-      "regression testing",
-      "production troubleshooting",
-      "root-cause analysis",
-      "on-call support",
-      "CloudWatch",
-      "Splunk",
-      "SignalFx"
-    ]
+    Languages: ["Java", "Python", "Go", "TypeScript", "JavaScript", "C++", "SQL"],
+    "Application Development": ["React", "Next.js", "Node.js", "Spring Boot", "FastAPI", "Pydantic", "REST APIs", "Microservices"],
+    "Data and Messaging": ["PostgreSQL", "MySQL", "Redis", "DynamoDB", "Prisma", "SQLAlchemy", "Alembic", "Kafka", "Amazon SQS", "Google Cloud Pub/Sub"],
+    "Cloud and Delivery": ["AWS (EC2, S3, SQS, RDS)", "GCP", "Docker", "Kubernetes", "Helm (Proof of Concept)", "Terraform", "GitHub Actions CI/CD", "Linux", "Git"],
+    "AI and Automation": ["LLM-assisted extraction and validation", "Model Context Protocol (MCP)", "Claude Code"],
+    "Testing and Reliability": ["Pytest", "Unit and integration testing", "Regression testing", "Production troubleshooting", "Root-cause analysis", "On-call support", "CloudWatch", "Splunk", "SignalFx"]
   },
   certifications: [
-    {
-      label: "AWS Certified Cloud Practitioner"
-    },
-    {
-      label: "Google Associate Cloud Engineer"
-    }
+    { label: "AWS Certified Cloud Practitioner" },
+    { label: "Google Associate Cloud Engineer" }
   ],
   education: [
     {
@@ -96,8 +24,7 @@ const portfolioData = {
       location: "Raleigh, NC",
       period: "Aug 2024 - May 2026",
       highlights: [
-        "Coursework : Advanced Distributed Systems, Design and Analysis of Algorithms, Database Systems, Cloud Computing, Object-Oriented Design and Development, Software Engineering, Automated Learning and Data Analysis, Foundations of Data Science, Neural Networks, and HCI.",
-        "Built strong depth in distributed systems, software engineering, and large-scale platform design through graduate-level coursework and hands-on problem solving.",
+        "Coursework: Advanced Distributed Systems, Design and Analysis of Algorithms, Database Systems, Cloud Computing, Object-Oriented Design and Development, Software Engineering, Automated Learning and Data Analysis, Foundations of Data Science, Neural Networks, and HCI.",
         "Active member of the Women in Computer Science media committee, contributing to community engagement and student-facing initiatives."
       ]
     },
@@ -107,11 +34,9 @@ const portfolioData = {
       logoSrc: "assets/vvce_logo.jpg",
       logoAlt: "Vidyavardhaka College of Engineering",
       location: "Mysuru, India",
-      period: "Aug 2017 – Aug 2021",
+      period: "Aug 2017 - Aug 2021",
       highlights: [
-        "Coursework: Data Structures, Web Development, Operating Systems, Computer Networks, Artificial Intelligence, Machine Learning",
-        "Built a strong systems and software engineering foundation",
-        "Developed early project experience across core CS subjects"
+        "Coursework: Data Structures, Web Development, Operating Systems, Computer Networks, Artificial Intelligence, Machine Learning"
       ]
     }
   ],
@@ -121,212 +46,149 @@ const portfolioData = {
       company: "iSimcha Health LLC",
       logoSrc: "assets/isimcha-logo.webp",
       logoAlt: "iSimcha Health LLC logo",
-      context: "Healthcare company · Collaborative application and report workflows",
-      period: "Jul 2026–Present",
-      location: "Durham, NC",
+      context: "Healthcare company, collaborative application and report workflows.",
+      period: "Jul 2026 - Present",
+      location: "",
       type: "Internship",
       achievements: [
-        "Implemented organization-specific branding with React, Next.js, and TypeScript across subdomains, landing pages, six authentication screens, and emails; improved responsive headers to preserve organization names and navigation.",
-        "Re-architected Python/Flask report generation into authenticated asynchronous jobs with GCP Cloud Tasks, Cloud Run, and Cloud Storage, separating submission from report rendering.",
-        "Restored report generation after PostgreSQL connection exhaustion by bounding the psycopg connection pool and correcting connection configuration.",
-        "Collaborated on the multi-investigator workflow, implementing all-or-none report delivery and persisting investigator snapshots in PostgreSQL to eliminate live warehouse lookups from the delivery page.",
-        "Automated staging deployments with GitHub Actions, Docker, and Terraform, using keyless GCP authentication and an Alembic migration gate.",
-        "Improved source-freshness tracking across 10+ sources, resolved eight review findings, and added 12 pytest regression tests."
+        "Took secure CSV ingestion from requirements through staging: 100% of uploads were SHA-256 verified and reviewer-approved before processing. Added role-based access, idempotent Cloud Run triggers, retry-only failure handling, recovery sweeps, and a feature-flagged rollout; kept row contents out of validation metadata and failure codes.",
+        "Restored report generation after PostgreSQL connection exhaustion by bounding the pool and moving rendering to async Cloud Tasks on Cloud Run and Cloud Storage. Separating submission from rendering eliminated manual restarts.",
+        "Made multi-investigator delivery all-or-none with PostgreSQL snapshots: 0 partial sets and no live warehouse lookups on the delivery page.",
+        "Automated staging releases with GitHub Actions, Docker, and Terraform. OIDC keyless authentication and an Alembic migration gate block releases after failed database migrations.",
+        "Improved correctness across 10+ sources with 12 pytest regression tests; recorded refreshes only after successful imports.",
+        "Shipped white-label React, Next.js, and TypeScript across branded subdomains: 6 authentication screens, landing pages, and customer emails.",
+        "Contributed to an MCP tool used through Claude Code to query PostgreSQL and validate reports."
       ],
-      skills: ["React / Next.js", "TypeScript", "Python / Flask", "PostgreSQL", "GCP", "GitHub Actions / Terraform"]
+      skills: ["Python / FastAPI", "PostgreSQL", "GCP", "GitHub Actions / Terraform", "React / Next.js", "TypeScript", "MCP"]
     },
     {
       role: "Software Engineer",
       company: "Accenture",
       logoSrc: "assets/accenture-logo.svg",
       logoAlt: "Accenture",
-      client: "Clients: TELUS WNP, Canada and Functional Engineering Compliance-as-Code Platform",
-      period: "Nov 2021–Jun 2024",
+      context: "Telecom client (Canada) and an internal compliance-as-code platform.",
+      period: "Nov 2021 - Jun 2024",
       location: "Bengaluru, India",
       type: "Full-time",
       achievements: [
-        "Increased transaction capacity by 30% across Java/Spring Boot and Node.js telecom microservices handling 20K+ daily requests.",
-        "Developed secure REST APIs for external providers with Spring Security, JWT, RBAC, and JPA/JDBC; reduced API latency by 25% through backend and SQL optimization.",
-        "Built Kafka, Amazon SQS, and Pub/Sub pipelines processing 10K+ daily events, with Redis lookups and DynamoDB workflow state.",
-        "Built Python and Go services integrating LLM-assisted extraction and validation into compliance workflows, with React workflow features, reducing manual review effort by 50%.",
-        "Reduced PostgreSQL query latency by 40% through execution-plan analysis, indexing, and join optimization.",
-        "Led on-call support and root-cause analysis, supporting 99.9% uptime through monitoring and Docker/Kubernetes recovery.",
-        "Mentored junior developers during onboarding.",
-        "Executed 150+ functional and regression test cases supporting a near-zero-downtime migration."
+        "Raised capacity by 30% across Java/Spring Boot and Node.js telecom microservices handling 20K+ daily requests.",
+        "Cut API latency by 25% through backend and SQL optimization; secured provider integrations with Spring Security, JWT, RBAC, and JPA/JDBC. Built Validate and Eligibility REST APIs that blocked invalid requests.",
+        "Cut PostgreSQL query latency by 40% through execution-plan analysis, indexing, and join optimization.",
+        "Decoupled services into a fault-tolerant Kafka, Amazon SQS, and Pub/Sub architecture processing 10K+ daily events, with Redis lookups and DynamoDB workflow state.",
+        "Built an XML-to-JSON conversion component that persisted incoming data and retried transient failures.",
+        "Reduced compliance review effort by 50% with Python and Go services for LLM-assisted extraction and validation, plus React workflow features.",
+        "Supported 99.9% uptime through on-call support and root-cause analysis with Splunk and SignalFx; supported Kubernetes deployments and mentored junior developers.",
+        "Executed 150+ functional and regression tests supporting a near-zero-downtime migration."
       ],
       skills: ["Java / Spring Boot", "Node.js", "Python / Go", "React", "PostgreSQL", "Kafka / SQS / Pub/Sub", "AWS / GCP"]
-    },
+    }
+  ],
+  earlierInternships: [
     {
-      role: "Web Development Intern",
+      title: "Web Development Intern",
       company: "Adishiva Technologies",
       period: "Mar 2021 - Apr 2021",
-      location: "Bengaluru, India",
-      type: "Internship",
-      achievements: ["Built responsive frontend components and integrated them with backend REST APIs in an Agile delivery environment."],
+      description: "Built responsive frontend components and integrated them with backend REST APIs in an Agile delivery environment.",
       skills: ["HTML", "CSS", "JavaScript", "REST APIs", "Agile"]
     },
     {
-      role: "Machine Learning Intern",
+      title: "Machine Learning Intern",
       company: "Verzeo",
-      logoSrc: "assets/verzeo-logo.svg",
-      logoAlt: "Verzeo",
       period: "Jul 2019 - Sep 2019",
-      location: "Remote",
-      type: "Internship",
-      achievements: ["Built and tuned classical fraud detection models on 1M+ transactions and experimented with deep learning approaches."],
+      description: "Built and tuned classical fraud detection models on 1M+ transactions and experimented with deep learning approaches.",
       skills: ["Python", "Machine Learning", "SVM", "Random Forest", "Gradient Boosting", "Deep Learning"]
     }
   ],
-  projects: [
+  featuredProjects: [
     {
-      title: "SnapSpec — Distributed Storage Snapshots",
-      description:
-        "Built a distributed storage snapshot prototype to capture consistent state with less coordination overhead. Implemented redirect-on-write and durable crash recovery.",
-      results: [
-        "Prototype tests across 10 configurations on three machines reduced median snapshot latency by 20–37% and control messages by 38% versus pause-based snapshots.",
-        "All tested snapshots passed consistency and restore checks."
-      ],
+      title: "SnapSpec",
+      subtitle: "Distributed Snapshots with Redirect-on-Write",
+      meta: "team of 3, NC State · Feb 2026 – Apr 2026",
+      description: "My part: the durable pending-transfer outbox that replays interrupted cross-node credits after failure, the MySQL snapshot metadata registry, and the coordinator-driven two-phase restore logic. Team results across 10 configurations on three machines: non-pausing strategies cut median snapshot latency 20-37% and control messages 38% versus pause-based snapshots, and every snapshot passed causal consistency, token conservation, and restore checks.",
       tags: ["C++", "Python", "MySQL", "Distributed Systems"],
-      links: [
-        {
-          label: "View Project Paper",
-          url: "https://drive.google.com/file/d/1xHc0BRLiUHhSIGQtz2nuhTNP6vbnkW1M/view?usp=sharing"
-        }
-      ],
-      theme: "blue"
+      image: "assets/snapspec-architecture.webp",
+      imageAlt: "Architecture diagram showing SnapSpec distributed snapshot workflow across nodes.",
+      links: [{ label: "View Project Paper", url: "https://drive.google.com/file/d/1xHc0BRLiUHhSIGQtz2nuhTNP6vbnkW1M/view?usp=sharing" }]
     },
     {
       title: "High Availability WordPress Deployment",
-      description:
-        "Built a resilient WordPress deployment on AWS with Docker and Kubernetes. Used load balancing, managed databases, autoscaling, monitoring, and access controls to support changing demand.",
-      results: ["In a 100-user Locust load test, pods scaled from two to nine with no failed requests. These are test results, not production outcomes."],
+      meta: "team project · Sep 2025 – Dec 2025",
+      description: "Co-designed a highly available AWS architecture covering 21 business requirements with ALB, RDS Multi-AZ (replicated standby with automatic failover), CloudFront, EFS, IAM, and CloudWatch. In a 100-user Locust load test on a local Kubernetes setup, pods autoscaled with no failed requests; authorization checks returned the expected HTTP 200 and 403. These are test results, not production outcomes.",
       tags: ["AWS", "Docker", "Kubernetes", "Locust"],
-      theme: "teal"
+      image: "assets/aws-architecture.webp",
+      imageAlt: "AWS architecture diagram for a highly available WordPress deployment with load balancing and autoscaling."
     },
     {
       title: "Inventory Management System",
-      description:
-        "Designed a normalized PostgreSQL schema for BOM-based recipe management, FEFO inventory allocation, and batch-level traceability. Implemented stored procedures, triggers, and indexing strategies to optimize transactional queries and improve inventory accuracy.",
+      meta: "Sep 2025 – Dec 2025",
+      description: "Designed a normalized PostgreSQL schema for BOM-based recipe management, FEFO inventory allocation, and batch-level traceability. Implemented stored procedures, triggers, and indexing strategies to optimize transactional queries and improve inventory accuracy.",
       tags: ["PostgreSQL", "Python", "Database Systems"],
-      links: [
-        {
-          label: "View GitHub Repo",
-          url: "https://github.com/niharikaaa26/InventoryManagement.git"
-        }
-      ],
-      theme: "pink"
-    },
+      image: "assets/inventory-er-diagram.webp",
+      imageAlt: "ER diagram for the inventory management system showing BOMs, allocations, and traceability.",
+      links: [{ label: "View GitHub Repo", url: "https://github.com/niharikaaa26/InventoryManagement.git" }]
+    }
+  ],
+  moreProjects: [
     {
       title: "Expertiza ReviewMappingController Refactor and Reimplementation",
-      description:
-        "Refactored and reimplemented ReviewMappingController in Expertiza to improve maintainability, scalability, and RESTful design. Modularized business logic, reduced duplication, applied stronger validation, and aligned the backend with Rails conventions and full test coverage.",
+      period: "Mar 2025 – Apr 2025",
+      description: "Refactored and reimplemented ReviewMappingController in Expertiza to improve maintainability, scalability, and RESTful design. Modularized business logic, reduced duplication, applied stronger validation, and aligned the backend with Rails conventions and full test coverage.",
       tags: ["Ruby", "OOP", "Rails", "HTML", "JavaScript"],
       links: [
-        {
-          label: "View Refactor Repo",
-          url: "https://github.com/niharikaaa26/expertiza"
-        },
-        {
-          label: "View Reimplementation Repo",
-          url: "https://github.com/niharikaaa26/reimplementation-back-end"
-        }
-      ],
-      theme: "blue"
+        { label: "View Refactor Repo", url: "https://github.com/niharikaaa26/expertiza" },
+        { label: "View Reimplementation Repo", url: "https://github.com/niharikaaa26/reimplementation-back-end" }
+      ]
     },
     {
       title: "Movie Ticketing System",
-      description:
-        "Built a role-based Ruby on Rails application for multiplex operations, covering show browsing, ticket booking and cancellation, user account management, and admin workflows with validations and real-time seat updates.",
+      period: "Jan 2025 – Feb 2025",
+      description: "Built a role-based Ruby on Rails application for multiplex operations, covering show browsing, ticket booking and cancellation, user account management, and admin workflows with validations and real-time seat updates.",
       tags: ["Ruby", "Ruby on Rails", "Docker", "HTML", "JavaScript"],
-      links: [
-        {
-          label: "View GitHub Repo",
-          url: "https://github.com/niharikaaa26/movie-ticketing.git"
-        }
-      ],
-      theme: "teal"
+      links: [{ label: "View GitHub Repo", url: "https://github.com/niharikaaa26/movie-ticketing.git" }]
     },
     {
       title: "PackFinder 2.0",
-      description:
-        "Developed a roommate matching web application for NC State students using Python, Django, and Bootstrap. Applied modular design, agile workflows, TDD, and GitHub Actions with Docker automation to deliver a scalable student-focused platform.",
+      period: "Sep 2024 – Dec 2024",
+      description: "Developed a roommate matching web application for NC State students using Python, Django, and Bootstrap. Applied modular design, agile workflows, TDD, and GitHub Actions with Docker automation to deliver a scalable student-focused platform.",
       tags: ["Python", "Django", "Git", "GitHub Actions", "Docker"],
-      links: [
-        {
-          label: "View GitHub Repo",
-          url: "https://github.com/niharikaaa26/PackFinder"
-        }
-      ],
-      theme: "pink"
+      links: [{ label: "View GitHub Repo", url: "https://github.com/niharikaaa26/PackFinder" }]
     },
     {
       title: "User Behavior Analysis for Movie Recommendations",
-      description:
-        "Built a collaborative filtering recommendation system using SVD and evaluated it with RMSE and MAE through cross-validation. Performed tuning and error analysis to understand how latent factors, regularization, and user behavior influence recommendation quality.",
+      period: "Sep 2024 – Dec 2024",
+      description: "Built a collaborative filtering recommendation system using SVD and evaluated it with RMSE and MAE through cross-validation. Performed tuning and error analysis to understand how latent factors, regularization, and user behavior influence recommendation quality.",
       tags: ["Machine Learning", "Collaborative Filtering", "Matrix Factorization", "Python"],
-      links: [
-        {
-          label: "View GitHub Repo",
-          url: "https://github.com/niharikaaa26/movie-recommendation.git"
-        }
-      ],
-      theme: "blue"
+      links: [{ label: "View GitHub Repo", url: "https://github.com/niharikaaa26/movie-recommendation.git" }]
     },
     {
       title: "Fog Computing in Healthcare Monitoring using IoT",
-      description:
-        "Designed a fog-computing-based healthcare monitoring system for real-time patient observation using IoT. Focused on low-latency notification delivery through fog-layer processing over TCP/IP with an open architecture approach.",
+      period: "Aug 2020 – Jun 2021",
+      description: "Designed a fog-computing-based healthcare monitoring system for real-time patient observation using IoT. Focused on low-latency notification delivery through fog-layer processing over TCP/IP with an open architecture approach.",
       tags: ["IoT", "Healthcare", "Fog Computing", "Mobile App"],
       link: "https://www.ijert.org/survey-on-fog-computing-in-healthcare-monitoring",
       linkLabel: "View Published Paper",
-      publicationMeta: "IJERT article downloads/views: 480",
-      theme: "teal"
+      publicationMeta: "IJERT article downloads/views: 480"
     },
     {
       title: "Hospital Management System",
-      description:
-        "Built a patient registration and hospital information management interface that captures and stores operational patient data required by doctors and care teams.",
+      period: "Aug 2020 – Dec 2020",
+      description: "Built a patient registration and hospital information management interface that captures and stores operational patient data required by doctors and care teams.",
       tags: ["MySQL", "CSS", "JavaScript", "HTML5"],
-      links: [
-        {
-          label: "View GitHub Repo",
-          url: "https://github.com/niharikaaa26/hospitalmanagementsystem"
-        }
-      ],
-      theme: "pink"
+      links: [{ label: "View GitHub Repo", url: "https://github.com/niharikaaa26/hospitalmanagementsystem" }]
     },
     {
       title: "Student Information Management System",
-      description:
-        "Developed a database-backed student information system with a simple user interface for maintaining and managing academic records efficiently.",
-      tags: ["MySQL", "Database Systems", "CSS", "JavaScript", "PHP"],
-      theme: "blue"
+      period: "Aug 2019 – Dec 2019",
+      description: "Developed a database-backed student information system with a simple user interface for maintaining and managing academic records efficiently.",
+      tags: ["MySQL", "Database Systems", "CSS", "JavaScript", "PHP"]
     }
   ],
   contact: {
-    text: "Have a software engineering opportunity or a bold idea? Let's build something that makes a difference.",
-    infoCards: [],
     links: [
-      {
-        label: "Email",
-        url: "mailto:niharika.suresh26@gmail.com",
-        iconSrc: "assets/icon-email.svg",
-        iconAlt: "Email"
-      },
-      {
-        label: "GitHub",
-        url: "https://github.com/niharikaaa26",
-        iconSrc: "assets/github-icon.svg",
-        iconAlt: "GitHub"
-      },
-      {
-        label: "LinkedIn",
-        url: "https://www.linkedin.com/in/niharika-suresh11/",
-        iconSrc: "assets/linkedin-icon.svg",
-        iconAlt: "LinkedIn"
-      }
-    ],
-    formTargetEmail: "niharika.suresh26@gmail.com"
+      { label: "Email", url: "mailto:niharika.suresh26@gmail.com", iconSrc: "assets/icon-email.svg", iconAlt: "Email" },
+      { label: "LinkedIn", url: "https://www.linkedin.com/in/niharika-suresh11", iconSrc: "assets/linkedin-icon.svg", iconAlt: "LinkedIn" },
+      { label: "GitHub", url: "https://github.com/niharikaaa26", iconSrc: "assets/github-icon.svg", iconAlt: "GitHub" }
+    ]
   }
 };
 
@@ -334,63 +196,44 @@ function byId(id) {
   return document.getElementById(id);
 }
 
-function setText(id, value) {
-  const el = byId(id);
-  if (el) el.textContent = value;
-}
-
-function setHtml(id, value) {
-  const el = byId(id);
-  if (el) el.innerHTML = value;
-}
-
 function renderAbout() {
-  setText("aboutLead", portfolioData.about.lead);
+  const aboutLead = byId("aboutLead");
+  if (aboutLead) aboutLead.textContent = portfolioData.about.lead;
+
   const aboutBody = byId("aboutBody");
-  if (aboutBody) {
-    if (portfolioData.about.body) {
-      aboutBody.textContent = portfolioData.about.body;
-      aboutBody.hidden = false;
-    } else {
-      aboutBody.hidden = true;
-    }
+  if (aboutBody) aboutBody.textContent = portfolioData.about.body;
+
+  const certList = byId("certificationList");
+  if (certList) {
+    certList.innerHTML = portfolioData.certifications
+      .map((item) => `<span class="cert-link">${item.label}</span>`)
+      .join("");
   }
-  setText("aboutCollabTitle", portfolioData.about.collaborationTitle);
-  setText("aboutCollabBody", portfolioData.about.collaborationBody);
-  setText("aboutAiBody", portfolioData.about.aiBody);
 }
 
 function renderSkills(groups) {
   const host = byId("skillGroups");
   if (!host) return;
   host.innerHTML = "";
+
   Object.entries(groups).forEach(([label, skills]) => {
     const group = document.createElement("article");
     group.className = "skill-group";
+
     const heading = document.createElement("h3");
     heading.textContent = label;
+
     const list = document.createElement("ul");
     list.className = "skill-group-list";
+
     skills.forEach((skill) => {
       const item = document.createElement("li");
       item.textContent = skill;
       list.appendChild(item);
     });
+
     group.append(heading, list);
     host.appendChild(group);
-  });
-}
-
-function renderCertifications(items) {
-  const host = byId("certificationList");
-  if (!host) return;
-  host.innerHTML = "";
-
-  items.forEach((item) => {
-    const chip = document.createElement("span");
-    chip.className = "cert-link";
-    chip.textContent = item.label;
-    host.appendChild(chip);
   });
 }
 
@@ -402,7 +245,8 @@ function renderEducation(items) {
   items.forEach((entry) => {
     const article = document.createElement("article");
     article.className = "education-card";
-    const highlights = (entry.highlights || [])
+
+    const highlightMarkup = (entry.highlights || [])
       .map((item) => `<li>${item}</li>`)
       .join("");
 
@@ -420,7 +264,7 @@ function renderEducation(items) {
       <div class="education-divider"></div>
       <div class="education-highlights">
         <p class="education-highlights-title">Highlights</p>
-        <ul>${highlights}</ul>
+        <ul>${highlightMarkup}</ul>
       </div>
     `;
     host.appendChild(article);
@@ -434,7 +278,7 @@ function renderWork(items) {
 
   items.forEach((entry) => {
     const article = document.createElement("article");
-    article.className = `experience-box${entry.company === "iSimcha Health LLC" || entry.company === "Accenture" ? " experience-featured" : ""}`;
+    article.className = "experience-box";
     const skills = (entry.skills || [])
       .map((skill) => `<span class="experience-pill">${skill}</span>`)
       .join("");
@@ -453,9 +297,8 @@ function renderWork(items) {
         <h3>${entry.role}</h3>
         <div class="experience-facts">
           <p class="education-fact experience-company"><strong>${entry.company}</strong></p>
-          <p class="education-fact">${entry.location}</p>
+          ${entry.location ? `<p class="education-fact">${entry.location}</p>` : ""}
           ${entry.context ? `<p class="education-fact">${entry.context}</p>` : ""}
-          ${entry.client ? `<p class="education-fact experience-client">${entry.client}</p>` : ""}
         </div>
         <div class="education-divider"></div>
         <ul class="experience-achievements">${(entry.achievements || []).map((achievement) => `<li>${achievement}</li>`).join("")}</ul>
@@ -464,47 +307,59 @@ function renderWork(items) {
     `;
     host.appendChild(article);
   });
+
+  const details = document.createElement("details");
+  details.className = "details-card";
+  details.innerHTML = `
+    <summary>Earlier internships</summary>
+    <ul>
+      ${portfolioData.earlierInternships.map((internship) => `
+        <li>
+          <strong>${internship.title}, ${internship.company} (${internship.period})</strong>
+          <p>${internship.description}</p>
+          <div class="experience-pills">${internship.skills.map((skill) => `<span class="experience-pill">${skill}</span>`).join("")}</div>
+        </li>
+      `).join("")}
+    </ul>
+  `;
+  host.appendChild(details);
 }
 
-function renderProjects(projects) {
-  const host = byId("projectList");
+function renderFeaturedProjects(items) {
+  const host = byId("featuredProjectList");
   if (!host) return;
   host.innerHTML = "";
 
-  projects.forEach((project) => {
+  items.forEach((project) => {
     const card = document.createElement("article");
-    card.className = `project-card project-box spotlight-card theme-${project.theme || "teal"}`;
+    card.className = "project-card project-box";
 
     const tags = (project.tags || [])
       .map((tag) => `<span class="tag">${tag}</span>`)
       .join("");
-    const actionLinks = [
-      ...(project.links || []),
-      ...(project.link
-        ? [
-            {
-              label: project.linkLabel || "Open Link",
-              url: project.link
-            }
-          ]
-        : [])
-    ];
-    const links = actionLinks
-      .map(
-        (item) =>
-          `<a class="project-link" aria-label="${item.label}: ${project.title}" href="${item.url}" target="_blank" rel="noreferrer">${item.label}</a>`
-      )
+    const links = (project.links || [])
+      .map((link) => `<a class="project-link" href="${link.url}" target="_blank" rel="noreferrer" aria-label="${link.label}: ${project.title}">${link.label}</a>`)
       .join("");
 
-    card.innerHTML = `
-      <div class="spotlight-visual" aria-hidden="true">
-        <div class="spotlight-grid"></div>
-        <div class="spotlight-orb"></div>
+    const imageMarkup = `
+      <div class="project-visual">
+        <img
+          src="${project.image || ""}"
+          alt="${project.imageAlt || project.title}"
+          loading="lazy"
+          width="1200"
+          height="780"
+          onerror="this.style.display='none'; this.parentNode.classList.add('image-fallback');"
+        />
       </div>
-      ${project.publicationMeta ? `<div class="project-top"><p class="project-top-note">${project.publicationMeta}</p></div>` : ""}
+    `;
+
+    card.innerHTML = `
+      ${project.image ? imageMarkup : '<div class="project-visual image-fallback" aria-hidden="true"></div>'}
       <div class="project-content">
+        <p class="project-meta-label">${project.meta || ""}</p>
         <h3>${project.title}</h3>
-        ${project.period ? `<p class="project-period">${project.period}</p>` : ""}
+        ${project.subtitle ? `<p class="project-subtitle">${project.subtitle}</p>` : ""}
         <p class="project-description">${project.description}</p>
         ${project.results ? `<ul class="project-results">${project.results.map((result) => `<li>${result}</li>`).join("")}</ul>` : ""}
         <div class="education-divider"></div>
@@ -512,45 +367,37 @@ function renderProjects(projects) {
         <div class="project-tags">${tags}</div>
       </div>
     `;
-
     host.appendChild(card);
   });
 }
 
-function renderContactInfo(cards) {
-  const host = byId("contactInfoList");
+function renderMoreProjects(items) {
+  const host = byId("moreProjectList");
   if (!host) return;
   host.innerHTML = "";
 
-  cards.forEach((card) => {
-    const article = document.createElement(card.url ? "a" : "article");
-    article.className = `info-card${card.iconOnly ? " icon-only" : ""}`;
-    if (card.url) {
-      article.href = card.url;
-      article.setAttribute("aria-label", `Email ${portfolioData.contact.formTargetEmail}`);
-      article.target = "_blank";
-      article.rel = "noreferrer";
-    }
+  items.forEach((project) => {
+    const card = document.createElement("article");
+    card.className = "more-project-card";
 
-    const value = card.url
-      ? card.value
-      : card.value;
+    const tags = (project.tags || [])
+      .map((tag) => `<span class="tag">${tag}</span>`)
+      .join("");
+    const links = (project.links || [])
+      .map((link) => `<a class="project-link" href="${link.url}" target="_blank" rel="noreferrer" aria-label="${link.label}: ${project.title}">${link.label}</a>`)
+      .join("");
+    const singleLink = project.link
+      ? `<div class="paper-link-group"><a class="project-link" href="${project.link}" target="_blank" rel="noreferrer" aria-label="${project.linkLabel || "Open Project"}: ${project.title}">${project.linkLabel || "Open Project"}</a>${project.publicationMeta ? `<small class="project-caption">${project.publicationMeta}</small>` : ""}</div>`
+      : "";
 
-    const iconHtml = card.iconSrc
-      ? `<img class="info-icon-img" src="${card.iconSrc}" alt="${card.iconAlt || card.title}" />`
-      : card.icon || "*";
-
-    article.innerHTML = card.iconOnly
-      ? `<div class="info-icon">${iconHtml}</div>`
-      : `
-      <div class="info-icon">${iconHtml}</div>
-      <div>
-        ${card.title ? `<p class="info-title">${card.title}</p>` : ""}
-        <p class="info-value">${value}</p>
-      </div>
+    card.innerHTML = `
+      <h3>${project.title}</h3>
+      ${project.period ? `<p class="project-meta-label">${project.period}</p>` : ""}
+      <p>${project.description}</p>
+      <div class="project-tags">${tags}</div>
+      ${(links || singleLink) ? `<div class="project-links">${links}${singleLink}</div>` : ""}
     `;
-
-    host.appendChild(article);
+    host.appendChild(card);
   });
 }
 
@@ -560,26 +407,26 @@ function renderContacts(links) {
   host.innerHTML = "";
 
   links.forEach((link) => {
-    const a = document.createElement("a");
-    a.className = "contact-link";
-    a.href = link.url;
-    a.setAttribute("aria-label", link.label);
-    a.target = "_blank";
-    a.rel = "noreferrer";
-
-    if (link.iconSrc) {
-      const img = document.createElement("img");
-      img.className = "contact-link-icon";
-      img.src = link.iconSrc;
-      img.alt = link.iconAlt || link.label;
-      a.appendChild(img);
+    const anchor = document.createElement("a");
+    anchor.className = "contact-link";
+    anchor.href = link.url;
+    anchor.setAttribute("aria-label", link.label);
+    if (!link.url.startsWith("mailto:")) {
+      anchor.target = "_blank";
+      anchor.rel = "noreferrer";
     }
 
-    const span = document.createElement("span");
-    span.textContent = link.label;
-    a.appendChild(span);
+    const icon = document.createElement("img");
+    icon.src = link.iconSrc;
+    icon.alt = "";
+    icon.setAttribute("aria-hidden", "true");
+    anchor.appendChild(icon);
 
-    host.appendChild(a);
+    const label = document.createElement("span");
+    label.textContent = link.label;
+    anchor.appendChild(label);
+
+    host.appendChild(anchor);
   });
 }
 
@@ -588,10 +435,10 @@ function setupMenu() {
   const nav = byId("nav");
   if (!btn || !nav) return;
 
-  function setOpen(open) {
+  const setOpen = (open) => {
     nav.classList.toggle("open", open);
     btn.setAttribute("aria-expanded", String(open));
-  }
+  };
 
   btn.addEventListener("click", () => setOpen(!nav.classList.contains("open")));
 
@@ -620,39 +467,44 @@ function setupMenu() {
   window.matchMedia("(max-width: 860px)").addEventListener("change", () => setOpen(false));
 }
 
-function hydrate() {
-  setText("brandName", portfolioData.navBrand || portfolioData.brandName);
-  setText("heroKicker", portfolioData.hero.kicker);
-  setText("heroName", portfolioData.hero.name);
-  setHtml("heroHeadline", portfolioData.hero.headline);
-  setText("heroSummary", portfolioData.hero.summary);
-  setText("contactText", portfolioData.contact.text);
+function typeTextEffect(element, text, speed = 70) {
+  if (!element || !text) return;
 
-  const heroAvatar = byId("heroAvatar");
-  if (heroAvatar) {
-    if (portfolioData.hero.profileImage) {
-      heroAvatar.classList.add("has-photo");
-      heroAvatar.setAttribute("role", "img");
-      heroAvatar.setAttribute("aria-label", portfolioData.hero.name);
-      heroAvatar.innerHTML = `<div class="hero-avatar-photo" style="background-image: url('${portfolioData.hero.profileImage}');"></div><div class="hero-avatar-shield" aria-hidden="true"></div>`;
-      ["contextmenu", "dragstart", "selectstart"].forEach((eventName) => {
-        heroAvatar.addEventListener(eventName, (event) => event.preventDefault());
-      });
-    } else {
-      heroAvatar.textContent = portfolioData.hero.avatarText || portfolioData.brandName;
+  let index = 0;
+  element.textContent = "";
+
+  const tick = () => {
+    if (index <= text.length) {
+      element.textContent = text.slice(0, index);
+      index += 1;
+      window.setTimeout(tick, speed);
     }
+  };
+
+  tick();
+}
+
+function hydrate() {
+  const brand = byId("brandName");
+  if (brand) brand.textContent = "N";
+
+  const footerLine = byId("footerLine");
+  if (footerLine) {
+    footerLine.textContent = `© ${new Date().getFullYear()} Niharika Maruvanahalli Suresh`;
   }
 
-  const year = new Date().getFullYear();
-  setText("footerLine", `${year} ${portfolioData.brandName}. All rights reserved.`);
+  const typedText = document.querySelector(".typed-text");
+  if (typedText) {
+    const text = typedText.dataset.text || typedText.textContent || "";
+    typeTextEffect(typedText, text, 65);
+  }
 
   renderAbout();
   renderSkills(portfolioData.skillGroups);
-  renderCertifications(portfolioData.certifications);
   renderEducation(portfolioData.education);
   renderWork(portfolioData.work);
-  renderProjects(portfolioData.projects);
-  renderContactInfo(portfolioData.contact.infoCards);
+  renderFeaturedProjects(portfolioData.featuredProjects);
+  renderMoreProjects(portfolioData.moreProjects);
   renderContacts(portfolioData.contact.links);
 }
 

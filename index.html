@@ -3,19 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Niharika Maruvanahalli Suresh | Software Engineer</title>
+    <title>Niharika Maruvanahalli Suresh | Backend & Full-Stack Software Engineer</title>
     <meta
       name="description"
-      content="Niharika Maruvanahalli Suresh, Software Engineer in Durham, NC. Explore healthcare applications, distributed services, AI-assisted automation, cloud deployments, and software projects."
+      content="Backend and full-stack software engineer. Java, Python, Go, React, AWS, GCP, Kubernetes. Telecom microservices, healthcare data workflows, and distributed systems."
     />
+    <meta property="og:title" content="Niharika Maruvanahalli Suresh | Backend & Full-Stack Software Engineer" />
+    <meta property="og:description" content="Backend and full-stack software engineer. Java, Python, Go, React, AWS, GCP, Kubernetes. Telecom microservices, healthcare data workflows, and distributed systems." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://niharikaaa26.github.io/portfolio/" />
+    <meta property="og:image" content="assets/og-image.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Niharika Maruvanahalli Suresh | Backend & Full-Stack Software Engineer" />
+    <meta name="twitter:description" content="Backend and full-stack software engineer. Java, Python, Go, React, AWS, GCP, Kubernetes. Telecom microservices, healthcare data workflows, and distributed systems." />
+    <meta name="twitter:image" content="assets/og-image.png" />
+    <link rel="canonical" href="https://niharikaaa26.github.io/portfolio/" />
     <link rel="icon" type="image/svg+xml" href="assets/favicon-n.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css?v=20261006192717" />
+    <link rel="stylesheet" href="styles.css?v=20261117011700" />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -24,35 +28,37 @@
         <a href="#top" class="brand" id="brandName" aria-label="Niharika Maruvanahalli Suresh, back to top">N</a>
         <button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-controls="nav" aria-expanded="false">Menu</button>
         <nav class="nav" id="nav" aria-label="Main navigation">
+          <a href="#top">Home</a>
           <a href="#about">About</a>
-          <a href="#work">Experience</a>
           <a href="#education">Education</a>
-          <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
+          <a href="#work">Experience</a>
+          <a href="#projects">Projects</a>
           <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
 
     <main id="main" tabindex="-1">
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="container hero-shell">
           <div class="hero-grid">
-            <div class="hero-avatar-block">
-              <div class="hero-avatar-ring">
-                <div class="hero-avatar" id="heroAvatar">N</div>
-              </div>
-            </div>
-
             <div class="hero-copy">
-              <p class="kicker" id="heroKicker">Software Engineer · Durham, NC</p>
               <p class="hero-nameplate" id="heroName">Niharika Maruvanahalli Suresh</p>
               <h1 class="hero-headline" id="heroHeadline">
-                I turn complex problems into dependable software.
+                <span class="accent typed-text" data-text="Backend and full-stack engineer building reliable, secure systems."></span>
               </h1>
-              <p class="hero-summary" id="heroSummary">
-                My work spans healthcare applications, distributed telecom services, and AI-assisted automation. I build web experiences, APIs, and data workflows, and support them through testing, cloud deployment, and production operations.
-              </p>
+
+              <div class="hero-statuses">
+                <div class="hero-status" aria-label="Open to full-time roles">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  Open to full-time roles
+                </div>
+                <div class="hero-status" aria-label="Open to relocation">
+                  <span class="status-dot" aria-hidden="true"></span>
+                  Open to relocation
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -60,48 +66,12 @@
 
       <section class="section" id="about">
         <div class="container">
-          <div class="about-layout">
-            <article class="about-story-card">
-              <p class="section-label">About</p>
-              <h2 id="aboutLead">From product needs to dependable software.</h2>
-              <p id="aboutBody">
-                Approximately three years of professional experience, a Master of Computer Science from NC State completed May 2026, and a current software engineering internship at healthcare company iSimcha Health LLC.
-              </p>
-              <div class="about-story-accent" aria-hidden="true">
-                <div class="about-story-orb"></div>
-                <div class="about-story-glow"></div>
-              </div>
-            </article>
-
-            <div class="about-side">
-              <article class="about-mini-card">
-                <p class="section-label">How I Work</p>
-                <h3 id="aboutCollabTitle">Understand the problem. Build together. Own the follow-through.</h3>
-                <p id="aboutCollabBody"></p>
-              </article>
-
-              <article class="about-stack-card">
-                <p class="section-label">AI in Software Engineering</p>
-                <h3 class="about-ai-title">Less busywork. More room to build.</h3>
-                <p id="aboutAiBody"></p>
-              </article>
-
-              <article class="about-cert-card">
-                <p class="section-label">Certifications</p>
-                <div class="about-cert-links" id="certificationList"></div>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section" id="work">
-        <div class="container">
-          <div class="section-head section-head-centered">
-            <h2>Experience</h2>
-            <p>Behind every smooth experience is solid engineering. Here's where I've put mine to work.</p>
-          </div>
-          <div class="stack" id="workList"></div>
+          <article class="about-card">
+            <p class="section-label">About</p>
+            <h2 id="aboutLead">Engineer who owns the follow-through.</h2>
+            <p id="aboutBody"></p>
+            <div class="about-cert-links" id="certificationList" aria-label="Professional certifications"></div>
+          </article>
         </div>
       </section>
 
@@ -109,19 +79,8 @@
         <div class="container">
           <div class="section-head section-head-centered">
             <h2>Education</h2>
-            <p>Where systems thinking, software engineering, and data-driven problem solving took shape.</p>
           </div>
           <div class="grid two" id="educationList"></div>
-        </div>
-      </section>
-
-      <section class="section" id="projects">
-        <div class="container">
-          <div class="section-head section-head-centered">
-            <h2>Projects</h2>
-            <p>Ideas put to the test. Explore the systems, experiments, and applications I've brought to life.</p>
-          </div>
-          <div class="project-spotlight-grid" id="projectList"></div>
         </div>
       </section>
 
@@ -129,9 +88,33 @@
         <div class="container">
           <div class="section-head section-head-centered">
             <h2>Skills</h2>
-            <p>From backend logic to polished user experiences, these are the tools I use to turn ideas into working software.</p>
           </div>
           <div class="skill-groups" id="skillGroups"></div>
+        </div>
+      </section>
+
+      <section class="section" id="work">
+        <div class="container">
+          <div class="section-head section-head-centered">
+            <h2>Experience</h2>
+          </div>
+          <div class="stack" id="workList"></div>
+        </div>
+      </section>
+
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-head section-head-centered">
+            <h2>Projects</h2>
+          </div>
+          <div class="section-head section-head-centered project-subhead">
+            <h3>Featured Projects</h3>
+          </div>
+          <div class="project-spotlight-grid" id="featuredProjectList"></div>
+          <div class="section-head section-head-centered project-subhead">
+            <h3>More Projects</h3>
+          </div>
+          <div class="more-project-grid" id="moreProjectList"></div>
         </div>
       </section>
 
@@ -139,10 +122,8 @@
         <div class="container">
           <div class="contact-layout">
             <div class="contact-left">
-              <h2>Let's Connect</h2>
-              <p id="contactText">Have a software engineering opportunity or a bold idea? Let's build something that makes a difference.</p>
-
-              <div class="contact-info-list" id="contactInfoList"></div>
+              <h2 id="contactHeading">Open to full-time software engineering roles.</h2>
+              <p id="contactText">I build dependable systems, automate the tricky parts, and enjoy turning complex workflows into reliable software.</p>
               <div class="follow-links" id="contactLinks"></div>
             </div>
           </div>
@@ -152,10 +133,24 @@
 
     <footer class="site-footer">
       <div class="container footer-wrap">
-        <p id="footerLine"></p>
+        <p id="footerLine">© 2026 Niharika Maruvanahalli Suresh</p>
       </div>
     </footer>
 
-    <script src="script.js?v=20261116163901"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Niharika Maruvanahalli Suresh",
+        "jobTitle": "Software Engineer",
+        "url": "https://niharikaaa26.github.io/portfolio/",
+        "sameAs": [
+          "https://www.linkedin.com/in/niharika-suresh11",
+          "https://github.com/niharikaaa26"
+        ]
+      }
+    </script>
+
+    <script src="script.js?v=20261117010526"></script>
   </body>
 </html>
